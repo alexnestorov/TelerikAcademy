@@ -19,11 +19,11 @@ class CorrectBrackets
         // In all other cases the expression is wrong.
         if (count == 0)
         {
-            Console.WriteLine("Correct Expression.");
+            Console.WriteLine("Correct");
         }
         else
         {
-            Console.WriteLine("Incorrect Expression.");
+            Console.WriteLine("Incorrect");
         }
     }
 
