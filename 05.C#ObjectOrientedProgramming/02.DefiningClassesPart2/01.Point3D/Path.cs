@@ -7,7 +7,7 @@
     {
         // Field
         private List<Point3D> path = new List<Point3D>();
-
+        
         // Property
         public List<Point3D> Points { get {return this.path; } set { this.path = value; } }
 
@@ -17,6 +17,7 @@
             set { this.Points[index] = value; }
         }
         public int Count { get {return path.Count; } }
+        
         // Constructor.
         public Path()
         {
@@ -36,6 +37,11 @@
         public void RemovePointAt(int index)
         {
             path.RemoveAt(index);
+        }
+
+        public override string ToString()
+        {
+            return string.Join("\r\n", this.Points);
         }
     }
 }

@@ -9,11 +9,11 @@
 
     class PathStorage
     {
-        public static void SavePath(string inputFile, Path path)
+        public static void SavePath(string outputFile, Path path)
         {
             try
             {
-                File.WriteAllText(inputFile, path.ToString());
+                File.WriteAllText(outputFile, path.ToString());
             }
             catch (AccessViolationException avex)
             {
@@ -25,22 +25,22 @@
                 throw ioex;
             }
         }
-        public static void LoadPath(string outputFile)
+        public static Path LoadPath(string inputFile)
         {
             Path path = new Path();
             try
             {
-
-                string text = File.ReadAllText(outputFile);
+                string text = File.ReadAllText(inputFile);
                 string[] points = text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
                 foreach (var point in points)
                 {
-                    string[] coordinates = point.Split(new string[] { ",", ", ", " " }, StringSplitOptions.RemoveEmptyEntries);
+                    string[] coordinates = point.Split(new char[] { ',', ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                     double x = double.Parse(coordinates[0]);
                     double y = double.Parse(coordinates[1]);
                     double z = double.Parse(coordinates[2]);
                     path.AddPoint(new Point3D(x, y, z));
                 }
+                return path;
 
             }
             catch (FileNotFoundException fnfe)

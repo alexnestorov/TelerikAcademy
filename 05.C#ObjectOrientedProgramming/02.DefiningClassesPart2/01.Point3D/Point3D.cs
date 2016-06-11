@@ -13,32 +13,29 @@
         private double y;
         private double z;
 
-        //start of system
+        // Start of system
         private static readonly Point3D startOfCordinateSystem = new Point3D(0, 0, 0);
 
         // Set properties for coordinates x, y, z.
-        //x property
         public double X
         {
             get { return this.x; }
             set { this.x = value; }
         }
 
-        //y property
         public double Y
         {
             get { return this.y; }
             set { this.y = value; }
         }
 
-        //z property
         public double Z
         {
             get { return this.z; }
             set { this.z = value; }
         }
 
-        //constructor
+        // Constructor
         public Point3D(double x, double y, double z)
         {
             this.x = x;
@@ -46,7 +43,7 @@
             this.z = z;
         }
 
-        // static constructor. Set starting coordinates, when set a new Point.
+        // Static constructor. Set starting coordinates, when set a new 3DPoint.
         public static Point3D Point3DStartingCoordinates
         {
             get {return startOfCordinateSystem; }
@@ -54,7 +51,7 @@
 
         public override string ToString()
         {
-            return string.Format("3D Point coordinates: {0}, {1}, {2}", this.X, this.Y, this.Z);
+            return string.Format(this.X + ", " + this.Y + ", " + this.Z);
         }
     }
 }

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A671387B-1F5A-4270-BF14-2A6A591D352D}</ProjectGuid>
+    <ProjectGuid>{6FC3BD47-AA06-4804-A073-4E0056EAAE71}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.Generics</RootNamespace>
-    <AssemblyName>02.Generics</AssemblyName>
+    <RootNamespace>_03.Matrix</RootNamespace>
+    <AssemblyName>03.Matrix</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenericList.cs" />
-    <Compile Include="GenericsTest.cs" />
+    <Compile Include="GenericMatrix.cs" />
+    <Compile Include="MatrixTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
