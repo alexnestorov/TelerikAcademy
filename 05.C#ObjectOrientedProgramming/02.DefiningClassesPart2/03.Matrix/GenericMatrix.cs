@@ -1,12 +1,9 @@
 ﻿namespace _03.Matrix
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
 
-    public class GenericMatrix<T> where T : IComparable, IComparable<T>
+    public class GenericMatrix<T> where T : struct, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
     {
         // Fields.
         private readonly T[,] matrixField;

@@ -2,7 +2,13 @@
 {
     using System;
 
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Interface | AttributeTargets.Method, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Class | 
+                    AttributeTargets.Struct | 
+                    AttributeTargets.Enum | 
+                    AttributeTargets.Interface | 
+                    AttributeTargets.Method, 
+                    AllowMultiple = false)]
+
     public class VersionAttribute : Attribute
     {
         // Properties.

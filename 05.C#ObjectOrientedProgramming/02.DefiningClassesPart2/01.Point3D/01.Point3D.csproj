@@ -43,10 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Distance.cs" />
-    <Compile Include="Path.cs" />
-    <Compile Include="PathStorage.cs" />
-    <Compile Include="Point3D.cs" />
+    <Compile Include="Point\Distance.cs" />
+    <Compile Include="PathData\Path.cs" />
+    <Compile Include="PathData\PathStorage.cs" />
+    <Compile Include="Point\Point3D.cs" />
     <Compile Include="Point3DProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
