@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using Students;
+    using Students.ExtensionMethods;
 
     class StudentOperations
     {
@@ -43,12 +44,12 @@
                                                                 .ThenByDescending(x => x.LastName)
                                                                 .ToList();
             Console.WriteLine("---------------------------------");
-            Console.WriteLine("Problem 5 - Sorted students using LAMBDA: \r\n" + string.Join(Environment.NewLine,sortedStudentsByLAMBDA));
+            Console.WriteLine("Problem 5 - Sorted students using LAMBDA: \r\n" + string.Join(Environment.NewLine, sortedStudentsByLAMBDA));
 
             var sortedStudentsByLINQ = from student in studentsToOrder
-                                   orderby student.FirstName descending,
+                                       orderby student.FirstName descending,
                                            student.LastName descending
-                                   select student;
+                                       select student;
             Console.WriteLine("---------------------------------");
             Console.WriteLine("Problem 5 - Sorted students using LINQ: \r\n" + string.Join(Environment.NewLine, sortedStudentsByLINQ));
 

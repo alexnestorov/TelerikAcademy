@@ -111,9 +111,7 @@
             string discipline = "Mathematics";
             var studentsByDepartment = listOfStudentsUNWE.Where(x => x.GroupNumber.DepartmentName
                                                                       .CompareTo(discipline) == 0)
-                                                         .Select(x =>  new {
-                                                                      FullName = x.ToString(),
-                                                                  })
+                                                         .Select(x =>  new { FullName = x.ToString(),})
                                                          .ToList();
 
             Console.WriteLine($"Problem 16 - Students with same discipline ({discipline})");
@@ -129,8 +127,7 @@
             Console.WriteLine($"Problem 17 - longest string is {longestString} with {longestString.Length} characters.");
 
             // Problem 18.
-            var studentsByGroupNumber = listOfStudentsUNWE.GroupBy(x => x.Group)
-                                                          .ToList();
+            var studentsByGroupNumber = listOfStudentsUNWE.ExtractInGroups();
             Console.WriteLine($"Problem 18 - Students extracted by group number.");
 
             foreach (var groupNum in studentsByGroupNumber)

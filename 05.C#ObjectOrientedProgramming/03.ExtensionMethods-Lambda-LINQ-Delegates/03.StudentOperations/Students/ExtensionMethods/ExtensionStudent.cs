@@ -23,7 +23,7 @@
         public static IEnumerable<Student> ExtractByEmail(this IEnumerable<Student> listOfStudents, string email)
         {
             var extractedStudents = listOfStudents.Where(x => x.E_Mail.EndsWith(email))
-                                                   .ToList();
+                                                  .ToList();
             return extractedStudents;
         }
 
