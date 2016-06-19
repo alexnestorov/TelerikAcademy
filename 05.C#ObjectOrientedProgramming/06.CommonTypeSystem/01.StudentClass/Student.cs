@@ -83,7 +83,7 @@
             {
                 if (this.ssn == null)
                 {
-                    throw new ArgumentException("You must enter last name.");
+                    throw new ArgumentException("You must enter social security number.");
                 }
                 this.ssn = value;
             }
