@@ -1,0 +1,6 @@
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP6April2015\CosmeticsShop\Cosmetics\bin\Debug\Cosmetics.exe.config
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP6April2015\CosmeticsShop\Cosmetics\obj\Debug\Cosmetics.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP6April2015\CosmeticsShop\Cosmetics\bin\Debug\Cosmetics.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP6April2015\CosmeticsShop\Cosmetics\bin\Debug\Cosmetics.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP6April2015\CosmeticsShop\Cosmetics\obj\Debug\Cosmetics.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP6April2015\CosmeticsShop\Cosmetics\obj\Debug\Cosmetics.pdb

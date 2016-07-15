@@ -1,0 +1,9 @@
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\WarMachine\bin\Debug\WarMachine.exe.config
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\WarMachine\bin\Debug\WarMachine.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\WarMachine\bin\Debug\WarMachine.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\WarMachine\obj\Debug\WarMachine.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\WarMachine\obj\Debug\WarMachine.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\WarMachine\obj\Debug\WarMachine.pdb
+C:\Users\Alexander\Desktop\GitHub\TelerikAcademy\05.C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\WarMachine\bin\Debug\WarMachine.exe.config
+C:\Users\Alexander\Desktop\GitHub\TelerikAcademy\05.C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\WarMachine\obj\Debug\WarMachine.exe
+C:\Users\Alexander\Desktop\GitHub\TelerikAcademy\05.C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\WarMachine\obj\Debug\WarMachine.pdb

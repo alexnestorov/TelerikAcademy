@@ -1,0 +1,5 @@
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyRPG\AcademyRPG\bin\Debug\AcademyRPG.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyRPG\AcademyRPG\bin\Debug\AcademyRPG.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyRPG\AcademyRPG\obj\Debug\AcademyRPG.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyRPG\AcademyRPG\obj\Debug\AcademyRPG.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyRPG\AcademyRPG\obj\Debug\AcademyRPG.pdb

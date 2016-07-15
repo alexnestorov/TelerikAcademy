@@ -1,0 +1,6 @@
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyEcosystem\AcademyEcosystem\bin\Debug\AcademyEcosystem.exe.config
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyEcosystem\AcademyEcosystem\bin\Debug\AcademyEcosystem.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyEcosystem\AcademyEcosystem\bin\Debug\AcademyEcosystem.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyEcosystem\AcademyEcosystem\obj\Debug\AcademyEcosystem.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyEcosystem\AcademyEcosystem\obj\Debug\AcademyEcosystem.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\AcademyEcosystem\AcademyEcosystem\obj\Debug\AcademyEcosystem.csprojResolveAssemblyReference.cache

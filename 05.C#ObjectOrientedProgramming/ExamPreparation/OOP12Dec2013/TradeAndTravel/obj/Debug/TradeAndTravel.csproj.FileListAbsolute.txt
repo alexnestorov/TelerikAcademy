@@ -1,0 +1,6 @@
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\TradeAndTravel\bin\Debug\TradeAndTravel.exe.config
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\TradeAndTravel\bin\Debug\TradeAndTravel.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\TradeAndTravel\bin\Debug\TradeAndTravel.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\TradeAndTravel\obj\Debug\TradeAndTravel.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\TradeAndTravel\obj\Debug\TradeAndTravel.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP12Dec2013\TradeAndTravel\obj\Debug\TradeAndTravel.pdb

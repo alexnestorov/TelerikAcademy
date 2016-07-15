@@ -1,0 +1,4 @@
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\HTMLRenderer\bin\Debug\HTMLRenderer.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\HTMLRenderer\bin\Debug\HTMLRenderer.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\HTMLRenderer\obj\Debug\HTMLRenderer.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\HTMLRenderer\obj\Debug\HTMLRenderer.pdb

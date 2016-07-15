@@ -1,0 +1,4 @@
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\SoftwareAcademy\bin\Debug\SoftwareAcademy.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\SoftwareAcademy\bin\Debug\SoftwareAcademy.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\SoftwareAcademy\obj\Debug\SoftwareAcademy.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP25March2013\SoftwareAcademy\obj\Debug\SoftwareAcademy.pdb

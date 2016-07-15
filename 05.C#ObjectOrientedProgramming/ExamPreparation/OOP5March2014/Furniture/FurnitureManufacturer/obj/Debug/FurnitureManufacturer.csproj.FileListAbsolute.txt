@@ -1,0 +1,9 @@
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP5March2014\FurnitureManufacturer\bin\Debug\Furnitures.exe.config
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP5March2014\FurnitureManufacturer\bin\Debug\Furnitures.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP5March2014\FurnitureManufacturer\bin\Debug\Furnitures.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP5March2014\FurnitureManufacturer\obj\Debug\FurnitureManufacturer.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP5March2014\FurnitureManufacturer\obj\Debug\Furnitures.exe
+C:\Users\Alexander\Documents\Visual Studio 2015\TelerikAcademy\C#ObjectOrientedProgramming\ExamPreparation\OOP5March2014\FurnitureManufacturer\obj\Debug\Furnitures.pdb
+C:\Users\Alexander\Desktop\GitHub\TelerikAcademy\05.C#ObjectOrientedProgramming\ExamPreparation\OOP5March2014\FurnitureManufacturer\bin\Debug\Furnitures.exe.config
+C:\Users\Alexander\Desktop\GitHub\TelerikAcademy\05.C#ObjectOrientedProgramming\ExamPreparation\OOP5March2014\FurnitureManufacturer\obj\Debug\Furnitures.exe
+C:\Users\Alexander\Desktop\GitHub\TelerikAcademy\05.C#ObjectOrientedProgramming\ExamPreparation\OOP5March2014\FurnitureManufacturer\obj\Debug\Furnitures.pdb
