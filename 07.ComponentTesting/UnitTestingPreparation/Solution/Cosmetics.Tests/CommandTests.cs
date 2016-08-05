@@ -18,15 +18,16 @@ namespace Cosmetics.Tests
         }
 
         [TestCase("Create Shampoo")]
-        [TestCase("Create Category")]
-        [TestCase("Create Toothpaste")]
+        [TestCase("AddToCategory Category")]
+        [TestCase("Show Category")]
         [TestCase("Create Shampoo")]
         [TestCase("Create Shampoo")]
         public void AddingCommandName_WithSplitCommandSymbol_ShouldReturnName(string input)
         {
+            var arrayParameters = input.Split(' ').ToArray();
             var command = Command.Parse(input);
 
-            Assert.AreEqual("Create", command.Name);
+            Assert.AreEqual(arrayParameters[0], command.Name);
         }
 
         [TestCase("Create   ")]
@@ -48,6 +49,12 @@ namespace Cosmetics.Tests
             var command = Command.Parse(input);
 
             Assert.AreEqual(3, command.Parameters.Count);
+        }
+
+        [Test]
+        public void WhenInputIsEqualToNull_ShouldThrowNullReferenceException()
+        {
+            Assert.Throws<NullReferenceException>(()=> Command.Parse(null));
         }
     }
 }

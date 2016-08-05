@@ -39,12 +39,32 @@ namespace Cosmetics.Tests
         [Test]
         public void CreateToothpaste_ShouldReturnInstanceOfClassToothPaste()
         {
-            var mockedFactory = new Mock<ICosmeticsFactory>();
-            var toothpaste = new Toothpaste("WhiteFresh", "Colgate", 90m, GenderType.Men, new List<string>() { "polychlorid","menth"});
+            var factory = new CosmeticsFactory();
 
-            mockedFactory.Setup(x => x.CreateToothpaste("White Fresh", "Colgate", 90m, GenderType.Men, new List<string>() { "polychlorid", "menth" })).Returns(toothpaste);
+            var result = factory.CreateToothpaste(
+                            "WhiteFresh",
+                            "Colgate",
+                            10M,
+                            GenderType.Unisex,
+                            new List<string>() { "Zele", "Chesun" });
+            Assert.IsInstanceOf<IToothpaste>(result);
+        }
 
-            Assert.AreEqual(toothpaste, mockedFactory.Object.CreateToothpaste("Wash&Go", "J&J", 90m, GenderType.Men, new List<string>() { "polychlorid", "menth" }));
+        [TestCase("a")]
+        [TestCase("VeryLongParameterNameLength")]
+        public void WhenCreatingToothpaste_AndBrandParamLenghtIsOutOfRange_ShouldThrowIndexOutOfRangeException(string brandParam)
+        {
+            var cosmeticFactory = new CosmeticsFactory();
+
+            Assert.Throws<IndexOutOfRangeException>(() => cosmeticFactory.CreateToothpaste("Colgate", brandParam, 2.10M, GenderType.Unisex, new List<string>() { "Propolis", "Menth" }));
+        }
+
+        [Test]
+        public void WhenCreatingToothpaste_AndAddingIngredientsWithInvalidStringLength_ShouldThrowAnException()
+        {
+            var cosmeticFactory = new CosmeticsFactory();
+
+            Assert.Throws<IndexOutOfRangeException>(() => cosmeticFactory.CreateToothpaste("WhiteFresh","Colgate", 2.10M, GenderType.Unisex, new List<string>() { "Propolis", "New" }));
         }
     }
 }

@@ -68,6 +68,8 @@
     <Compile Include="CosmeticsFactoryTests.cs" />
     <Compile Include="MockedCosmeticsEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShampooTests.cs" />
+    <Compile Include="ValidatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cosmetics\Cosmetics.csproj">

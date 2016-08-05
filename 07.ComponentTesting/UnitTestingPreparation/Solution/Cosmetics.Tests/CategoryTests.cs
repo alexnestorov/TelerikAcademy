@@ -4,6 +4,7 @@ using Cosmetics.Common;
 using Cosmetics.Products;
 using Cosmetics.Contracts;
 using System.Collections.Generic;
+using Moq;
 
 namespace Cosmetics.Tests
 {
@@ -39,14 +40,12 @@ namespace Cosmetics.Tests
         [TestMethod]
         public void AddingFirstProduct_MustReturnOneProductInProductsList()
         {
-            var category = new Category("ForMale");
-            var ingredients = new List<string>();
-            IProduct product = new Toothpaste("WhiteFresh","Colgate", 3.20m, GenderType.Unisex,ingredients);
+            var mockedCategory = new Mock<ICategory>();
+            var mockedProduct = new Mock<IProduct>();
 
-            category.AddCosmetics(product);
+            mockedCategory.Object.AddCosmetics(mockedProduct.Object);
 
-            Assert.AreEqual(1, category.Products.Count);
-
+            mockedCategory.Verify(x => x.AddCosmetics(mockedProduct.Object), Times.Once); 
         }
     }
 }
