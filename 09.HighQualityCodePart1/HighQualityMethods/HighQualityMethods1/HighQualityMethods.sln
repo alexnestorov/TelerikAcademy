@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Methods", "Methods", "{2CB5C7ED-A7D3-4F7A-A30E-58737499AFA4}"
+	ProjectSection(SolutionItems) = preProject
+		Methods.cs = Methods.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpAdvancedExamTasks", "CSharpAdvancedExamTasks", "{2AC7750E-EE4D-48EE-9DAD-921C5623E074}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\C#Advanced\Exam31May2016Evening\02.Problem2\DancingMoves.cs = ..\..\..\C#Advanced\Exam31May2016Evening\02.Problem2\DancingMoves.cs
+		..\..\..\C#Advanced\Exam31May2016Evening\03.Problem3\HarryPotter4D.cs = ..\..\..\C#Advanced\Exam31May2016Evening\03.Problem3\HarryPotter4D.cs
+		..\..\..\C#Advanced\Exam31May2016Evening\01.Problem1\Messages.cs = ..\..\..\C#Advanced\Exam31May2016Evening\01.Problem1\Messages.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

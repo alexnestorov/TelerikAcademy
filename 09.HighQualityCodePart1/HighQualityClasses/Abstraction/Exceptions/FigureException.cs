@@ -2,6 +2,7 @@
 {
     using System;
 
+    [Serializable]
     public class FigureException : Exception
     {
         public FigureException(string msg)

@@ -21,6 +21,7 @@
             {
                 return this.width;
             }
+
             private set
             {
                 Validator.ValidateProperty(value, this.GetType().Name);
@@ -34,6 +35,7 @@
             {
                 return this.height;
             }
+
             private set
             {
                 Validator.ValidateProperty(value, this.GetType().Name);
@@ -47,9 +49,11 @@
             {
                 return this.depth;
             }
+
             private set
             {
-                Validator.ValidateProperty(value,this.GetType().Name);
+                Validator.ValidateProperty(value, this.GetType().Name);
+                this.depth = value;
             }
         }
 

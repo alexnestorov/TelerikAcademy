@@ -1,0 +1,1083 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XAct.Collections</name>
+    </assembly>
+    <members>
+        <member name="T:XAct.Collections.DateTimeStampedElementWrapper`1">
+            <summary>
+            An implementation of the 
+            <see cref="T:XAct.Collections.IDateTimeStampedElementWrapper`1"/>
+            to wrap elements in order to give them a last touched value.
+            </summary>
+            <typeparam name="TItem">The type of the item.</typeparam>
+        </member>
+        <member name="T:XAct.Collections.IDateTimeStampedElementWrapper`1">
+            <summary>
+            Contract for an element wrapper, 
+            that exposes a Date last used value.
+            <para>
+            Used by the <see cref="T:XAct.Collections.MRUList`2"/>
+            </para>
+            </summary>
+            <typeparam name="TItem">The type of the item.</typeparam>
+        </member>
+        <member name="M:XAct.Collections.IDateTimeStampedElementWrapper`1.Touch">
+            <summary>
+            Updates <see cref="P:XAct.Collections.IDateTimeStampedElementWrapper`1.Touched"/> to the current DateTime.
+            </summary>
+        </member>
+        <member name="P:XAct.Collections.IDateTimeStampedElementWrapper`1.Touched">
+            <summary>
+            Gets the DateTime the item was last touched.
+            </summary>
+        </member>
+        <member name="P:XAct.Collections.IDateTimeStampedElementWrapper`1.Item">
+            <summary>
+            Gets the wrapped Item.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.DateTimeStampedElementWrapper`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAct.Collections.DateTimeStampedElementWrapper`1"/> class.
+            with Stamp initialize with DateTime.Now
+            </summary>
+            <param name="item">The wrapped item.</param>
+        </member>
+        <member name="M:XAct.Collections.DateTimeStampedElementWrapper`1.Touch">
+            <summary>
+            Updates the time stamp to DateTime.Now.
+            </summary>
+        </member>
+        <member name="P:XAct.Collections.DateTimeStampedElementWrapper`1.Touched">
+            <summary>
+            Gets the time stamp.
+            </summary>
+            <value>The stamp.</value>
+        </member>
+        <member name="P:XAct.Collections.DateTimeStampedElementWrapper`1.Item">
+            <summary>
+            Gets the wrapped element.
+            </summary>
+            <value>The vertex.</value>
+        </member>
+        <member name="T:XAct.Collections.DirtyDictionary`2">
+            <summary>
+            Dictionary of values.
+            </summary>
+            <typeparam name="TKey">Type of Key.</typeparam>
+            <typeparam name="TValue">Type of Value.</typeparam>
+        </member>
+        <member name="F:XAct.Collections.DirtyDictionary`2._InnerDictionary">
+            <summary>
+            Inner dictionary of DirtyDictionaryItem elements.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.IsDirtyItem(`0)">
+            <summary>
+            Determines whether a specific item in the dictionary has been changed, 
+            and is therefore <c>dirty</c>.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>
+            	<c>true</c> if the specified item has been changed and is therefore <c>dirty</c>; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.FullItem(`0)">
+            <summary>
+            Returns a specific item in the underlying dictionary.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.ResetDirty">
+            <summary>
+            Resets the IsDirty flag on all items in the dictionary.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.Add(`0,`1)">
+            <summary>
+            Adds an element with the provided key and value to the Dictionary.
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="key">The key.</param>
+            <param name="value">The value to add.</param>
+            <exception cref="T:System.NotSupportedException">The Dictionary is read-only.</exception>
+            <exception cref="T:System.ArgumentException">An element with the same key already exists in the Dictionary</exception>
+            <exception cref="T:System.ArgumentNullException">key is null</exception>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.ContainsKey(`0)">
+            <summary>
+            Determines whether the Dictionary
+            contains an element with the specified key.
+            </summary>
+            <returns>
+            true if the Dictionary contains
+            an element with the key; otherwise, false.
+            </returns>
+            <remarks>
+            </remarks>
+            <param name="key">The key to locate in the Dictionary.</param>
+            <exception cref="T:System.ArgumentNullException">key is null</exception>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.Remove(`0)">
+            <summary>
+            Removes the element with the specified key from the Dictionary.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <returns>
+            true if the element is successfully removed; otherwise, false.  This method
+            also returns false if key was not found in the original Dictionary.
+            </returns>
+            <exception cref="T:System.NotSupportedException">The Dictionary is read-only.</exception>
+            <exception cref="T:System.ArgumentNullException">key is null</exception>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+            Tries to get the value.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.Add(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Adds an item to the Collection.
+            </summary>
+            <param name="item">The object to add to the Collection.</param>
+            <exception cref="T:System.NotSupportedException">The collection is read-only.</exception>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.Clear">
+            
+             <summary>
+             Removes all items from the Collection.
+             </summary>
+             <exception cref="T:System.NotSupportedException">The collection is read-only.</exception>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.Contains(System.Collections.Generic.KeyValuePair{`0,`1})">
+            
+             <summary>
+             Determines whether the Collection contains
+             a specific value.
+             </summary>
+             <param name="item">The object to locate in the Collection.</param> 
+             <returns><c>true</c>if item is found in the Collection; otherwise, false.</returns>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.Remove(System.Collections.Generic.KeyValuePair{`0,`1})">
+            
+             <summary>
+             Removes the first occurrence of a specific object from the Collection.
+             </summary>
+             <param name="item">The object to remove from the Collection.</param>
+             <remarks>
+             true if item was successfully removed from the Collection;
+             otherwise, false. This method also returns false if item is not found in
+             the original Collection.
+             </remarks>
+             <exception cref="T:System.NotSupportedException">The collection is read-only.</exception>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">
+            
+             <summary>
+             Copies the elements of the Collection to an
+             System.Array, starting at a particular System.Array index.
+             </summary>
+             <param name="arrayIndex">The zero-based index in array at which copying begins.</param>
+             <exception cref="T:System.ArgumentNullException">array is null</exception>
+             <exception cref="T:System.ArgumentOutOfRangeException">arrayIndex is less than 0</exception>
+             <exception cref="T:System.ArgumentException">array is multidimensional.-or-arrayIndex is equal to or greater than the
+             length of array.-or-The number of elements in the source Collection
+             is greater than the available space from arrayIndex to the end of the destination
+             array.-or-Type KeyValuePair cannot be cast automatically to the type of the destination
+             array.</exception>
+             <param name="array">The one-dimensional System.Array that is the destination of the elements
+             copied from Collection. The System.Array must be zero-based
+             </param>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerator`1"></see> that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.OnChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Changed"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionary`2.CheckDirty">
+            <summary>
+            Scans items for any that are IsDirty.
+            </summary>
+            <remarks>
+            <para>
+            Invoked by <see cref="P:XAct.Collections.DirtyDictionary`2.IsDirty"/>{get;} property.
+            </para>
+            </remarks>
+        </member>
+        <member name="E:XAct.Collections.DirtyDictionary`2.Changed">
+            <summary>
+            Event raised when the collection becomes Dirty.
+            </summary>
+        </member>
+        <member name="P:XAct.Collections.DirtyDictionary`2.IsDirty">
+            <summary>
+            Gets whether any value in the dictionary has been updated.
+            Use <see cref="M:XAct.Collections.DirtyDictionary`2.ResetDirty"/> to reset the flag to <c>false</c>. 
+            </summary>
+        </member>
+        <member name="P:XAct.Collections.DirtyDictionary`2.Keys">
+            <summary>
+            Gets a Collection containing the keys of
+            the Dictionary.
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            An Collection containing the keys of the object
+            that implements Dictionary.
+            </returns>
+        </member>
+        <member name="P:XAct.Collections.DirtyDictionary`2.Values">
+            <summary>
+            Gets an Collection containing the values in
+            the Dictionary.
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            An Collection containing the values in the
+            object that implements Dictionary.
+            </returns>
+        </member>
+        <member name="P:XAct.Collections.DirtyDictionary`2.Item(`0)">
+            <summary>
+            Gets or sets the element with the specified key.
+            </summary>
+            <remarks>
+            </remarks>
+            <returns>
+            The element with the specified key.
+            </returns>
+            <exception cref="T:System.NotSupportedException">The Dictionary is read-only.</exception>
+            <exception cref="T:System.ArgumentNullException">key is null</exception>
+            <exception cref="T:System.ArgumentException">The key was not found.</exception>
+        </member>
+        <member name="P:XAct.Collections.DirtyDictionary`2.Count">
+            <summary>
+            Gets the number of elements in the collection.
+            </summary>
+        </member>
+        <member name="P:XAct.Collections.DirtyDictionary`2.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the Collection is read-only.
+            </summary>
+            <value></value>
+            <returns><c>true</c>if the Collection is read-only; otherwise, false.</returns>
+        </member>
+        <member name="T:XAct.Collections.DirtyDictionaryItem`2">
+            <summary>
+            An individual Attribute element.
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionaryItem`2.ResetDirty">
+            <summary>
+            Resets the IsDirty flag to false.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionaryItem`2.#ctor(`0,`1)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DirtyDictionaryItem&lt;TKey, TValue&gt;"/> class.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:XAct.Collections.DirtyDictionaryItem`2.#ctor(`0,`1,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DirtyDictionaryItem&lt;TKey, TValue&gt;"/> class.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <param name="isDirty">if set to <c>true</c> [is dirty].</param>
+        </member>
+        <member name="P:XAct.Collections.DirtyDictionaryItem`2.Key">
+            <summary>
+            Gets the attribute key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:XAct.Collections.DirtyDictionaryItem`2.Value">
+            <summary>
+            Gets or sets the attribute value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:XAct.Collections.DirtyDictionaryItem`2.IsDirty">
+            <summary>
+            Gets a value indicating whether the value has changed since construted.
+            </summary>
+            <remarks>
+            <para>
+            Note that the Flag can only be <c>set;</c> to True.
+            To reset the flag to False, use the <see cref="M:ResetDirty"/> method.
+            </para>
+            </remarks>
+            <value><c>true</c> if this instance is dirty; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XAct.LinkedListExtensions">
+            <summary>
+            Extensions to the LinkedList
+            </summary>
+        </member>
+        <member name="T:XAct.Collections.ObjectCollection">
+            <summary>
+            A Generic collection that has been typed to an <see cref="T:System.Object"/>.
+            <para>
+            Note that (unlike <see cref="T:XAct.Collections.TypedObjectCollection"/>) 
+            no Type checking is performed.
+            </para>
+            </summary>
+            <remarks>
+            <para>
+            The need for this type of control is because Silverlight 2.0
+            does not have a mechanism for working with generics from XAML.
+            </para>
+            <para>
+            An example of its usage could be something like the following:
+            <code>
+            <![CDATA[
+            <UserControl x:Class="SilverlightApplication10.UserControl4"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+              xmlns:collections="clr-namespace:System.Collections;assembly=XAct.Collections.Core"
+              Width="200" Height="250">
+                
+                <UserControl.Resources>
+                    <collections:ObjectCollection x:Key="hardcodedValues">
+                        <sys:String>1</sys:String>
+                        <sys:String>2</sys:String>
+                    </collections:TypedObjectCollection>
+                </UserControl.Resources>
+                
+                <Grid x:Name="LayoutRoot" Background="White">
+                    <!-- Binding to list as src for Items -->
+                    <ListBox  ItemsSource="{StaticResource hardcodedValues}"/>
+                </Grid>
+            </UserControl>
+            ]]>
+            </code>
+            </para>
+            <para>
+            See also <see cref="T:XAct.Collections.TypedObjectCollection"/>.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:XAct.Collections.ObjectCollection.#ctor">
+            <summary>
+            Initializes a new instance of the 
+            <see cref="T:XAct.Collections.ObjectCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.ObjectCollection.#ctor(System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the 
+            <see cref="T:XAct.Collections.ObjectCollection"/> class.
+            </summary>
+            <param name="collection">The collection.</param>
+        </member>
+        <member name="T:XAct.Collections.ObservableObjectCollection">
+            <summary>
+            An <see cref="T:System.Collections.ObjectModel.ObservableCollection`1"/>
+            that accepts <see cref="T:System.Object"/>s, raising the 
+            <see cref="E:System.Collections.ObjectModel.ObservableCollection`1.CollectionChanged"/> 
+            event every time an item
+            is added, removed, or changed.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.ObservableObjectCollection.#ctor(System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of 
+            the <see cref="T:XAct.Collections.ObservableObjectCollection"/> class.
+            </summary>
+            <param name="list">The list of items to add to the collection.</param>
+            <exception cref="T:System.ArgumentNullException">
+            An exception is raised if <paramref name="list"/> is null.
+            </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableObjectCollection.#ctor(System.Collections.IEnumerable,System.Boolean)">
+            <summary>
+            Initializes a new instance of the 
+            <see cref="T:XAct.Collections.ObservableObjectCollection"/> class.
+            </summary>
+            <param name="list">The list of items to add to the collection.</param>
+            <param name="stripNulls">if set to <c>true</c> does 
+            not add <c>null</c> list items.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            An exception is raised if <paramref name="list"/> is null.
+            </exception>
+        </member>
+        <member name="T:XAct.Collections.ObservableDictionary`2">
+            <summary>
+            A Dictionary that raises INotifyCollectionChanged, INotifyPropertyChanged events when
+            Keys and Values are updated.
+            </summary>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAct.Collections.ObservableDictionary`2"/> class.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAct.Collections.ObservableDictionary`2"/> class.
+            </summary>
+            <param name="dictionary">The dictionary.</param>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAct.Collections.ObservableDictionary`2"/> class.
+            </summary>
+            <param name="comparer">The comparer.</param>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAct.Collections.ObservableDictionary`2"/> class.
+            </summary>
+            <param name="dictionary">The dictionary.</param>
+            <param name="comparer">The comparer.</param>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAct.Collections.ObservableDictionary`2"/> class.
+            </summary>
+            <param name="info">The info.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.Add(`0,`1)">
+            <summary>
+            Adds an element with the provided key and value to the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <param name="key">The object to use as the key of the element to add.</param>
+            <param name="value">The object to use as the value of the element to add.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is null.
+              </exception>
+              
+            <exception cref="T:System.ArgumentException">
+            An element with the same key already exists in the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+              </exception>
+              
+            <exception cref="T:System.NotSupportedException">
+            The <see cref="T:System.Collections.Generic.IDictionary`2"/> is read-only.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.Clear">
+            <summary>
+            Removes all items from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            The <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.ContainsKey(`0)">
+            <summary>
+            Determines whether the <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the specified key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:System.Collections.Generic.IDictionary`2"/>.</param>
+            <returns>
+            true if the <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the key; otherwise, false.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is null.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.ContainsValue(`1)">
+            <summary>
+            Determines whether the specified value contains value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+              <c>true</c> if the specified value contains value; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator"/> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.Remove(`0)">
+            <summary>
+            Removes the element with the specified key from the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <returns>
+            true if the element is successfully removed; otherwise, false.  This method also returns false if <paramref name="key"/> was not found in the original <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is null.
+              </exception>
+              
+            <exception cref="T:System.NotSupportedException">
+            The <see cref="T:System.Collections.Generic.IDictionary`2"/> is read-only.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="key">The key whose value to get.</param>
+            <param name="value">When this method returns, the value associated with the specified key, if the key is found; otherwise, the default value for the type of the <paramref name="value"/> parameter. This parameter is passed uninitialized.</param>
+            <returns>
+            true if the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the specified key; otherwise, false.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is null.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.AddEntry(`0,`1)">
+            <summary>
+            Adds the entry.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.ClearEntries">
+            <summary>
+            Clears the entries.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.GetIndexAndEntryForKey(`0,System.Collections.DictionaryEntry@)">
+            <summary>
+            Gets the index and entry for the given key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="entry">The entry.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:XAct.Collections.ObservableDictionary`2.CollectionChanged"/> event.
+            </summary>
+            <param name="args">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.OnPropertyChanged(System.String)">
+            <summary>
+            Called when A property is changed.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.RemoveEntry(`0)">
+            <summary>
+            Removes the entry.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.SetEntry(`0,`1)">
+            <summary>
+            Sets the entry.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#IDictionary{TKey@TValue}#Add(`0,`1)">
+            <summary>
+            Adds an element with the provided key and value to the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <param name="key">The object to use as the key of the element to add.</param>
+            <param name="value">The object to use as the value of the element to add.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is null.
+              </exception>
+              
+            <exception cref="T:System.ArgumentException">
+            An element with the same key already exists in the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+              </exception>
+              
+            <exception cref="T:System.NotSupportedException">
+            The <see cref="T:System.Collections.Generic.IDictionary`2"/> is read-only.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#IDictionary{TKey@TValue}#Remove(`0)">
+            <summary>
+            Removes the element with the specified key from the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <returns>
+            true if the element is successfully removed; otherwise, false.  This method also returns false if <paramref name="key"/> was not found in the original <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is null.
+              </exception>
+              
+            <exception cref="T:System.NotSupportedException">
+            The <see cref="T:System.Collections.Generic.IDictionary`2"/> is read-only.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#IDictionary{TKey@TValue}#ContainsKey(`0)">
+            <summary>
+            Determines whether the <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the specified key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:System.Collections.Generic.IDictionary`2"/>.</param>
+            <returns>
+            true if the <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the key; otherwise, false.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is null.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#IDictionary{TKey@TValue}#TryGetValue(`0,`1@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="key">The key whose value to get.</param>
+            <param name="value">When this method returns, the value associated with the specified key, if the key is found; otherwise, the default value for the type of the <paramref name="value"/> parameter. This parameter is passed uninitialized.</param>
+            <returns>
+            true if the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the specified key; otherwise, false.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is null.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#IDictionary#Add(System.Object,System.Object)">
+            <summary>
+            Adds an element with the provided key and value to the <see cref="T:System.Collections.IDictionary"/> object.
+            </summary>
+            <param name="key">The <see cref="T:System.Object"/> to use as the key of the element to add.</param>
+            <param name="value">The <see cref="T:System.Object"/> to use as the value of the element to add.</param>
+            <exception cref="T:System.ArgumentNullException">
+              <paramref name="key"/> is null.
+              </exception>
+              
+            <exception cref="T:System.ArgumentException">
+            An element with the same key already exists in the <see cref="T:System.Collections.IDictionary"/> object.
+              </exception>
+              
+            <exception cref="T:System.NotSupportedException">
+            The <see cref="T:System.Collections.IDictionary"/> is read-only.
+            -or-
+            The <see cref="T:System.Collections.IDictionary"/> has a fixed size.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#IDictionary#Clear">
+            <summary>
+            Removes all items from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            The <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#IDictionary#Contains(System.Object)">
+            <summary>
+            Determines whether the <see cref="T:System.Collections.IDictionary"/> object contains an element with the specified key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:System.Collections.IDictionary"/> object.</param>
+            <returns>
+            true if the <see cref="T:System.Collections.IDictionary"/> contains an element with the key; otherwise, false.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+              <paramref name="key"/> is null.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#IDictionary#GetEnumerator">
+            <summary>
+            Returns an <see cref="T:System.Collections.IDictionaryEnumerator"/> object for the <see cref="T:System.Collections.IDictionary"/> object.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IDictionaryEnumerator"/> object for the <see cref="T:System.Collections.IDictionary"/> object.
+            </returns>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Adds the specified KVP.
+            </summary>
+            <param name="kvp">The KVP.</param>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#Clear">
+            <summary>
+            Removes all items from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            The <see cref="T:System.Collections.Generic.ICollection`1"/> is read-only.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Determines whether [contains] [the specified KVP].
+            </summary>
+            <param name="kvp">The KVP.</param>
+            <returns>
+              <c>true</c> if [contains] [the specified KVP]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">
+            <summary>
+            Copies to.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="index">The index.</param>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Populates a <see cref="T:System.Runtime.Serialization.SerializationInfo"/> with the data needed to serialize the target object.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> to populate with data.</param>
+            <param name="context">The destination (see <see cref="T:System.Runtime.Serialization.StreamingContext"/>) for this serialization.</param>
+            <exception cref="T:System.Security.SecurityException">
+            The caller does not have the required permission.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.OnDeserializing(System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Runs when the entire object graph has been deserialized.
+            </summary>
+            <param name="context">The object that initiated the callback. The functionality for this parameter is not currently implemented.</param>
+        </member>
+        <member name="F:XAct.Collections.ObservableDictionary`2._keyedEntryCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XAct.Collections.ObservableDictionary`2.Comparer">
+            <summary>
+            Gets the comparer.
+            </summary>
+        </member>
+        <member name="P:XAct.Collections.ObservableDictionary`2.Count">
+            <summary>
+            Gets the number of elements contained in the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <returns>
+            The number of elements contained in the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+              </returns>
+        </member>
+        <member name="P:XAct.Collections.ObservableDictionary`2.Keys">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1"/> containing the keys of the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.Generic.ICollection`1"/> containing the keys of the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+              </returns>
+        </member>
+        <member name="P:XAct.Collections.ObservableDictionary`2.Item(`0)">
+            <summary>
+            Gets or sets the element with the specified key.
+            </summary>
+            <returns>
+            The element with the specified key.
+              </returns>
+              
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is null.
+              </exception>
+              
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">
+            The property is retrieved and <paramref name="key"/> is not found.
+              </exception>
+              
+            <exception cref="T:System.NotSupportedException">
+            The property is set and the <see cref="T:System.Collections.Generic.IDictionary`2"/> is read-only.
+              </exception>
+        </member>
+        <member name="P:XAct.Collections.ObservableDictionary`2.Values">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1"/> containing the values in the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.Generic.ICollection`1"/> containing the values in the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+              </returns>
+        </member>
+        <member name="P:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#IDictionary{TKey@TValue}#Keys">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1"/> containing the keys of the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.Generic.ICollection`1"/> containing the keys of the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+              </returns>
+        </member>
+        <member name="P:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#IDictionary{TKey@TValue}#Values">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1"/> containing the values in the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.Generic.ICollection`1"/> containing the values in the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+              </returns>
+        </member>
+        <member name="P:XAct.Collections.ObservableDictionary`2.System#Collections#Generic#IDictionary{TKey@TValue}#Item(`0)">
+            <summary>
+            Gets or sets the element with the specified key.
+            </summary>
+            <returns>
+            The element with the specified key.
+              </returns>
+              
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is null.
+              </exception>
+              
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">
+            The property is retrieved and <paramref name="key"/> is not found.
+              </exception>
+              
+            <exception cref="T:System.NotSupportedException">
+            The property is set and the <see cref="T:System.Collections.Generic.IDictionary`2"/> is read-only.
+              </exception>
+        </member>
+        <member name="E:XAct.Collections.ObservableDictionary`2.System#Collections#Specialized#INotifyCollectionChanged#CollectionChanged">
+            <summary>
+            Occurs when the collection changes.
+            </summary>
+        </member>
+        <member name="E:XAct.Collections.ObservableDictionary`2.CollectionChanged">
+            <summary>
+            Occurs when the collection changes.
+            </summary>
+        </member>
+        <member name="E:XAct.Collections.ObservableDictionary`2.System#ComponentModel#INotifyPropertyChanged#PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="E:XAct.Collections.ObservableDictionary`2.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:XAct.Collections.ObservableDictionary`2.KeyedDictionaryEntryCollection`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="TKeyName">The type of the key.</typeparam>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.KeyedDictionaryEntryCollection`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAct.Collections.ObservableDictionary`2.KeyedDictionaryEntryCollection`1"/> class.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.KeyedDictionaryEntryCollection`1.#ctor(System.Collections.Generic.IEqualityComparer{`2})">
+            <summary>
+            Initializes a new instance of the <see cref="T:XAct.Collections.ObservableDictionary`2.KeyedDictionaryEntryCollection`1"/> class.
+            </summary>
+            <param name="comparer">The comparer.</param>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.KeyedDictionaryEntryCollection`1.GetKeyForItem(System.Collections.DictionaryEntry)">
+            <summary>
+            Gets the key for item.
+            </summary>
+            <param name="entry">The entry.</param>
+            <returns></returns>
+        </member>
+        <member name="T:XAct.Collections.ObservableDictionary`2.Enumerator`2">
+            <summary>
+            
+            </summary>
+            <typeparam name="TKeyName"></typeparam>
+            <typeparam name="TDictValue"></typeparam>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.Enumerator`2.#ctor(XAct.Collections.ObservableDictionary{`2,`3},System.Boolean)">
+            <summary>
+            Initializes a new instance of the Enumerator struct.
+            </summary>
+            <param name="dictionary">The dictionary.</param>
+            <param name="isDictionaryEntryEnumerator">if set to <c>true</c> [is dictionary entry enumerator].</param>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.Enumerator`2.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.Enumerator`2.MoveNext">
+            <summary>
+            Advances the enumerator to the next element of the collection.
+            </summary>
+            <returns>
+            true if the enumerator was successfully advanced to the next element; false if the enumerator has passed the end of the collection.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            The collection was modified after the enumerator was created.
+              </exception>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.Enumerator`2.ValidateCurrent">
+            <summary>
+            Validates the current.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.Enumerator`2.ValidateVersion">
+            <summary>
+            Validates the version.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.ObservableDictionary`2.Enumerator`2.System#Collections#IEnumerator#Reset">
+            <summary>
+            Sets the enumerator to its initial position, which is before the first element in the collection.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            The collection was modified after the enumerator was created.
+              </exception>
+        </member>
+        <member name="P:XAct.Collections.ObservableDictionary`2.Enumerator`2.Current">
+            <summary>
+            Gets the current element.
+            </summary>
+        </member>
+        <member name="P:XAct.Collections.ObservableDictionary`2.Enumerator`2.System#Collections#IEnumerator#Current">
+            <summary>
+            Gets the current.
+            </summary>
+        </member>
+        <member name="T:XAct.Collections.TypedObjectCollection">
+            <summary>
+            A Collection that allows for verification of the item <c>Type</c>
+            before it is added to collection.
+            <para>
+            This is a slight improvement to the <c>ObjectCollection</c>,
+            but the argument checking method employed is not 
+            to be confused with a truly Typed collection.
+            </para>
+            </summary>
+            <remarks>
+            <para>
+            An example of its usage could be as follows:
+            <code>
+            <![CDATA[
+            <UserControl x:Class="SilverlightApplication10.UserControl4"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+              xmlns:collections="clr-namespace:System.Collections;assembly=XAct.Collections.Core"
+              Width="200" Height="250">
+                
+                <UserControl.Resources>
+                    <collections:TypedObjectCollection 
+                      x:Key="hardcodedValues" 
+                      ItemType="System.Int32">
+                        <sys:String>1</sys:String>
+                        <sys:String>2</sys:String>
+            
+                        <sys:Int32>4</sys:Int32>
+                        <sys:Int32>5</sys:Int32>
+            
+                        <!-- Would cause exception:
+                             <sys:String>Boing...</sys:String>
+                        -->
+                    </collections:TypedObjectCollection>
+                </UserControl.Resources>
+                
+                <Grid x:Name="LayoutRoot" Background="White">
+                    <!-- Binding to list as src for Items -->
+                    <ListBox  ItemsSource="{StaticResource hardcodedValues}"/>
+                </Grid>
+            </UserControl>
+            ]]>
+            </code>
+            </para>
+            <para>
+            See also <see cref="T:XAct.Collections.ObjectCollection"/>.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:XAct.Collections.TypedObjectCollection.#ctor">
+            <summary>
+            Initializes a new instance of 
+            the <see cref="T:XAct.Collections.TypedObjectCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.TypedObjectCollection.#ctor(System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:XAct.Collections.TypedObjectCollection"/> class.
+            </summary>
+            <param name="collection">The collection.</param>
+        </member>
+        <member name="M:XAct.Collections.TypedObjectCollection.InsertItem(System.Int32,System.Object)">
+            <summary>
+            Inserts an element into the 
+            <see cref="T:System.Collections.ObjectModel.Collection`1"/> 
+            at the specified index.
+            </summary>
+            <param name="index">
+            The zero-based index at which <paramref name="item"/> 
+            should be inserted.</param>
+            <param name="item">
+            The object to insert. 
+            The value can be null for reference types.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is less than zero.
+            -or-
+            <paramref name="index"/> is greater 
+            than <see cref="P:System.Collections.ObjectModel.Collection`1.Count"/>.
+            </exception>
+        </member>
+        <member name="P:XAct.Collections.TypedObjectCollection.ItemType">
+            <summary>
+            Gets or sets the <see cref="T:System.Type"/> 
+            of the item.
+            </summary>
+            <value>The type of the item.</value>
+        </member>
+        <member name="T:XAct.Collections.TypedObservableObjectCollection">
+            <summary>
+            An <see cref="T:System.Collections.ObjectModel.ObservableCollection`1"/>
+            that accepts <see cref="T:System.Object"/>s, raising the 
+            <see cref="E:System.Collections.ObjectModel.ObservableCollection`1.CollectionChanged"/> 
+            event every time an item
+            is added, removed, or changed.
+            </summary>
+        </member>
+        <member name="M:XAct.Collections.TypedObservableObjectCollection.#ctor(System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of 
+            the <see cref="T:XAct.Collections.ObservableObjectCollection"/> class.
+            </summary>
+            <param name="list">The list of items to add to the collection.</param>
+            <exception cref="T:System.ArgumentNullException">
+            An exception is raised if <paramref name="list"/> is null.
+            </exception>
+        </member>
+        <member name="M:XAct.Collections.TypedObservableObjectCollection.#ctor(System.Collections.IEnumerable,System.Boolean)">
+            <summary>
+            Initializes a new instance of the 
+            <see cref="T:XAct.Collections.ObservableObjectCollection"/> class.
+            </summary>
+            <param name="list">The list of items to add to the collection.</param>
+            <param name="stripNulls">if set to <c>true</c> does 
+            not add <c>null</c> list items.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            An exception is raised if <paramref name="list"/> is null.
+            </exception>
+        </member>
+        <member name="M:XAct.Collections.TypedObservableObjectCollection.InsertItem(System.Int32,System.Object)">
+            <summary>
+            Inserts an element into the 
+            <see cref="T:System.Collections.ObjectModel.Collection`1"/> 
+            at the specified index.
+            </summary>
+            <param name="index">
+            The zero-based index at which <paramref name="item"/> 
+            should be inserted.</param>
+            <param name="item">
+            The object to insert. 
+            The value can be null for reference types.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is less than zero.
+            -or-
+            <paramref name="index"/> is greater 
+            than <see cref="P:System.Collections.ObjectModel.Collection`1.Count"/>.
+            </exception>
+        </member>
+        <member name="P:XAct.Collections.TypedObservableObjectCollection.ItemType">
+            <summary>
+            Gets or sets the <see cref="T:System.Type"/> 
+            of the item.
+            </summary>
+            <value>The type of the item.</value>
+        </member>
+    </members>
+</doc>

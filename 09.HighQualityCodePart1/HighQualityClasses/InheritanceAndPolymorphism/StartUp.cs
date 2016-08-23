@@ -11,8 +11,7 @@
         public static void Main()
         {
             LocalCourse localCourse = new LocalCourse("Databases");
-            //Console.WriteLine(localCourse);
-
+            // Console.WriteLine(localCourse);
             localCourse.Lab = "Enterprise";
             Console.WriteLine(localCourse);
 

@@ -1,10 +1,53 @@
-﻿using HighQualityMethods.Methods.Enums;
-using System;
-
-namespace Methods
+﻿namespace HighQualityMethods.Methods
 {
+    using System;
+
+    using Enums;
+    using global::Methods;
+
     public class Methods
     {
+        public static void Main()
+        {
+            Console.WriteLine(CalculateTriangleArea(3, 4, 5));
+
+            Console.WriteLine(ConvertDigitToText(5));
+
+            Console.WriteLine(FindMax(5, -1, 3, 2, 14, 2, 3));
+
+            Console.WriteLine(PrintAsNumber(1.3, "f"));
+            Console.WriteLine(PrintAsNumber(0.75, "%"));
+            Console.WriteLine(PrintAsNumber(2.30, "r"));
+
+            Console.WriteLine(CalculateDistance(3, -1, 3, 2.5));
+            Console.WriteLine("Vertical? " + CheckForLinePosition(3, -1, 3, 2.5));
+            Console.WriteLine("Horizontal? " + CheckForLinePosition(2, 4, 3, 4));
+            Console.WriteLine("Horizontal? " + CheckForLinePosition(2, 4, 6, 8));
+            // Console.WriteLine("Vertical? " + CheckForLinePosition(3, 5, 3, 5));
+            Student firstStudent = new Student()
+            {
+                FirstName = "Peter",
+                LastName = "Ivanov",
+                BirthdayDate = new DateTime(1989, 12, 29),
+                Town = TownType.Burgas,
+                OtherInfo = "Student at Sofia University"
+            };
+
+            Student secondStudent = new Student()
+            {
+                FirstName = "Stella",
+                LastName = "Markova",
+                BirthdayDate = new DateTime(1987, 10, 21),
+                Town = TownType.Sofia,
+                OtherInfo = "Student at Telerik Academy season 2016 / 2017"
+            };
+
+            Console.WriteLine("{0} older than {1} -> {2}",
+                                   firstStudent.FirstName,
+                                   secondStudent.FirstName,
+                                   firstStudent.IsOlderThan(secondStudent));
+        }
+
         internal static double CalculateTriangleArea(double sideA, double sideB, double sideC)
         {
             if (sideA <= 0)
@@ -14,7 +57,6 @@ namespace Methods
             else if (sideB <= 0)
             {
                 throw new ArgumentOutOfRangeException("Side B can not be negative number");
-
             }
             else if (sideC <= 0)
             {
@@ -30,16 +72,16 @@ namespace Methods
         {
             switch (digit)
             {
-                case 0: return StringDigitType.zero.ToString();
-                case 1: return StringDigitType.one.ToString();
-                case 2: return StringDigitType.two.ToString();
-                case 3: return StringDigitType.three.ToString();
-                case 4: return StringDigitType.four.ToString();
-                case 5: return StringDigitType.five.ToString();
-                case 6: return StringDigitType.six.ToString();
-                case 7: return StringDigitType.seven.ToString();
-                case 8: return StringDigitType.eight.ToString();
-                case 9: return StringDigitType.nine.ToString();
+                case 0: return StringDigitType.Zero.ToString();
+                case 1: return StringDigitType.One.ToString();
+                case 2: return StringDigitType.Two.ToString();
+                case 3: return StringDigitType.Three.ToString();
+                case 4: return StringDigitType.Four.ToString();
+                case 5: return StringDigitType.Five.ToString();
+                case 6: return StringDigitType.Six.ToString();
+                case 7: return StringDigitType.Seven.ToString();
+                case 8: return StringDigitType.Eight.ToString();
+                case 9: return StringDigitType.Nine.ToString();
                 default: throw new ArgumentOutOfRangeException("Invalid digit. Must enter digit between [0-9].");
             }
         }
@@ -98,7 +140,6 @@ namespace Methods
             return formattedString;
         }
 
-
         internal static double CalculateDistance(double pointX1, double pointY1, double pointX2, double pointY2)
         {
             double distance = Math.Sqrt((pointX2 - pointX1) * (pointX2 - pointX1) + 
@@ -128,48 +169,6 @@ namespace Methods
             {
                 return linePosition = "Line position is not defined either horizontal or vertical";
             }
-        }
-
-        static void Main()
-        {
-            Console.WriteLine(CalculateTriangleArea(3, 4, 5));
-
-            Console.WriteLine(ConvertDigitToText(5));
-
-            Console.WriteLine(FindMax(5, -1, 3, 2, 14, 2, 3));
-
-            Console.WriteLine(PrintAsNumber(1.3, "f"));
-            Console.WriteLine(PrintAsNumber(0.75, "%"));
-            Console.WriteLine(PrintAsNumber(2.30, "r"));
-
-            Console.WriteLine(CalculateDistance(3, -1, 3, 2.5));
-            Console.WriteLine("Vertical? " + CheckForLinePosition(3, -1, 3, 2.5));
-            Console.WriteLine("Horizontal? " + CheckForLinePosition(2, 4, 3, 4));
-            Console.WriteLine("Horizontal? " + CheckForLinePosition(2, 4, 6, 8));
-            //Console.WriteLine("Vertical? " + CheckForLinePosition(3, 5, 3, 5));
-
-            Student firstStudent = new Student()
-            {
-                FirstName = "Peter",
-                LastName = "Ivanov",
-                BirthdayDate = new DateTime(1989, 12, 29),
-                Town = TownType.Burgas,
-                OtherInfo = "Student at Sofia University"
-            };
-
-            Student secondStudent = new Student()
-            {
-                FirstName = "Stella",
-                LastName = "Markova",
-                BirthdayDate = new DateTime(1987, 10, 21),
-                Town = TownType.Sofia,
-                OtherInfo = "Student at Telerik Academy season 2016 / 2017"
-            };
-
-            Console.WriteLine("{0} older than {1} -> {2}",
-                                   firstStudent.FirstName, 
-                                   secondStudent.FirstName, 
-                                   firstStudent.IsOlderThan(secondStudent));
         }
     }
 }

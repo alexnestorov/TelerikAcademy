@@ -1,57 +1,16 @@
 ﻿namespace InheritanceAndPolymorphism.Abstracts
 {
+    using System.Collections.Generic;
+    using System.Text;
+
     using CohesionAndCoupling.Common;
     using CohesionAndCoupling.Exceptions;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     public abstract class Course
     {
         private string name;
         private string teacherName;
         private IList<string> students;
-
-        public string Name
-        {
-            get
-            {
-                return this.name;
-            }
-            set
-            {
-                Validator.ValidateProperty(value, this.GetType().Name);
-                this.name = value;
-            }
-        }
-
-        public string TeacherName
-        {
-            get
-            {
-                return this.teacherName;
-            }
-            set
-            {
-                Validator.ValidateProperty(value, this.GetType().Name);
-                this.teacherName = value;
-            }
-        }
-
-        public IList<string> Students
-        {
-            get
-            {
-                return this.students;
-            }
-            set
-            {
-                Validator.ValidateProperty(value, this.GetType().Name);
-                this.students = value;
-            }
-        }
 
         protected Course(string name)
         {
@@ -67,21 +26,50 @@
         }
 
         protected Course(string courseName, string teacherName, IList<string> students)
-            : this(courseName,teacherName)
+            : this(courseName, teacherName)
         {
             this.Students = students;
         }
 
-        private string GetStudentsAsString()
+        public string Name
         {
-            Validator.ValidateProperty(this.Students, this.Students.GetType().Name);
-            if (this.Students.Count.Equals(0))
+            get
             {
-                throw new ParameterNullException();
+                return this.name;
             }
-            else
+
+            set
             {
-                return "{ " + string.Join(", ", this.Students) + " }";
+                Validator.ValidateProperty(value, this.GetType().Name);
+                this.name = value;
+            }
+        }
+
+        public string TeacherName
+        {
+            get
+            {
+                return this.teacherName;
+            }
+
+            set
+            {
+                Validator.ValidateProperty(value, this.GetType().Name);
+                this.teacherName = value;
+            }
+        }
+
+        public IList<string> Students
+        {
+            get
+            {
+                return this.students;
+            }
+
+            set
+            {
+                Validator.ValidateProperty(value, this.GetType().Name);
+                this.students = value;
             }
         }
 
@@ -95,9 +83,23 @@
                 result.Append("; Teacher = ");
                 result.Append(this.TeacherName);
             }
+
             result.Append("; Students = ");
             result.Append(this.GetStudentsAsString());
             return result.ToString();
+        }
+
+        private string GetStudentsAsString()
+        {
+            Validator.ValidateProperty(this.Students, this.Students.GetType().Name);
+            if (this.Students.Count.Equals(0))
+            {
+                throw new ParameterNullException();
+            }
+            else
+            {
+                return "{ " + string.Join(", ", this.Students) + " }";
+            }
         }
     }
 }

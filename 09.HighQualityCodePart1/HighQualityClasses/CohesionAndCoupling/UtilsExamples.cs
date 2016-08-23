@@ -9,7 +9,7 @@
     {
         public static void Main()
         {
-            //Console.WriteLine(FileUtils.GetFileExtension("example"));
+            // Console.WriteLine(FileUtils.GetFileExtension("example"));
             Console.WriteLine(FileUtils.GetFileExtension("example.pdf"));
             Console.WriteLine(FileUtils.GetFileExtension("example.new.pdf"));
 
@@ -29,7 +29,7 @@
             Figure currentFigure = new Figure(figureWidth, figureHeight, figureDepth);
 
             Console.WriteLine("Volume = {0:f2}", currentFigure.CalculateVolume());
-            Console.WriteLine("Diagonal XYZ = {0:f2}",currentFigure.CalculateDiagonalXYZ());
+            Console.WriteLine("Diagonal XYZ = {0:f2}", currentFigure.CalculateDiagonalXYZ());
             Console.WriteLine("Diagonal XY = {0:f2}", currentFigure.CalculateDiagonalXY());
             Console.WriteLine("Diagonal XZ = {0:f2}", currentFigure.CalculateDiagonalXZ());
             Console.WriteLine("Diagonal YZ = {0:f2}", currentFigure.CalculateDiagonalYZ());

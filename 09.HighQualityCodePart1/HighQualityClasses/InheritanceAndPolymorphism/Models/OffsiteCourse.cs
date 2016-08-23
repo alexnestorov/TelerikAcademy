@@ -7,8 +7,6 @@
 
     public class OffsiteCourse : Course
     {
-        public string Town { get; set; }
-
         public OffsiteCourse(string courseName)
             : base(courseName)
         {
@@ -27,17 +25,7 @@
             this.Town = null;
         }
 
-        private string GetStudentsAsString()
-        {
-            if (this.Students == null || this.Students.Count == 0)
-            {
-                return "{ }";
-            }
-            else
-            {
-                return "{ " + string.Join(", ", this.Students) + " }";
-            }
-        }
+        public string Town { get; set; }
 
         public override string ToString()
         {
@@ -49,8 +37,21 @@
                 result.Append("; Town = ");
                 result.Append(this.Town);
             }
+
             result.Append(" }");
             return result.ToString();
+        }
+
+        private string GetStudentsAsString()
+        {
+            if (this.Students == null || this.Students.Count == 0)
+            {
+                return "{ }";
+            }
+            else
+            {
+                return "{ " + string.Join(", ", this.Students) + " }";
+            }
         }
     }
 }

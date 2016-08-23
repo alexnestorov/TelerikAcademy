@@ -10,15 +10,18 @@
         {
         }
 
-        public ParameterOutOfRangeException(string message) : base(message)
+        public ParameterOutOfRangeException(string message)
+            : base(message)
         {
         }
 
-        public ParameterOutOfRangeException(string message, Exception innerException) : base(message, innerException)
+        public ParameterOutOfRangeException(string message, Exception innerException)
+            : base(message, innerException)
         {
         }
 
-        protected ParameterOutOfRangeException(SerializationInfo info, StreamingContext context) : base(info, context)
+        protected ParameterOutOfRangeException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
         {
         }
     }

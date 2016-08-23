@@ -7,9 +7,7 @@
 
     public class LocalCourse : Course
     {
-        public string Lab { get; set; }
-
-        public LocalCourse(string courseName) 
+        public LocalCourse(string courseName)
             : base(courseName)
         {
             this.Lab = null;
@@ -27,6 +25,8 @@
             this.Lab = null;
         }
 
+        public string Lab { get; set; }
+
         public override string ToString()
         {
             var result = new StringBuilder();
@@ -37,6 +37,7 @@
                 result.Append("; Lab = ");
                 result.Append(this.Lab);
             }
+
             result.Append(" }");
             return result.ToString();
         }

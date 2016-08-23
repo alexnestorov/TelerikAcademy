@@ -12,7 +12,7 @@
                 throw new ArgumentOutOfRangeException("File name has not extension.");
             }
 
-            string extension = fileName.Substring(indexOfLastDot + 1,fileName.Length - indexOfLastDot - 1);
+            string extension = fileName.Substring(indexOfLastDot + 1, fileName.Length - indexOfLastDot - 1);
             return extension;
         }
 
@@ -27,6 +27,5 @@
             string withoutExtension = fileName.Substring(0, indexOfLastDot);
             return withoutExtension;
         }
-
     }
 }
