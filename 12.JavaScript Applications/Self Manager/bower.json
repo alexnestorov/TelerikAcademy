@@ -1,0 +1,27 @@
+{
+  "name": "self-manager",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Doncho Minkov (DonchoMinkov@gmail.com)"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "sammy": "^0.7.6",
+    "bootstrap": "^3.3.7",
+    "handlebars": "^4.0.5",
+    "crypto-js": "^3.1.6",
+    "sha1": "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/sha1.js",
+    "everlive": "^1.7.2"
+  }
+}
