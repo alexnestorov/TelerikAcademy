@@ -9,7 +9,7 @@ namespace ComputersExam.Models
     {
         private readonly LaptopBattery battery;
 
-        internal Laptop(Cpu cpu, Rammstein ram, IEnumerable<HardDriver> hardDrives, HardDriver videoCard, LaptopBattery battery)
+        internal Laptop(Cpu cpu, Ram ram, IEnumerable<VideoCard> hardDrives, VideoCard videoCard, LaptopBattery battery)
             : base(cpu, ram, hardDrives, videoCard )
         {
             this.battery = battery;

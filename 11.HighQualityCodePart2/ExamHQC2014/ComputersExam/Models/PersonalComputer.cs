@@ -6,7 +6,7 @@ namespace ComputersExam.Models
 {
     public class PersonalComputer : Computer
     {
-        public PersonalComputer(Cpu cpu, Rammstein ram, IEnumerable<HardDriver> hardDrives, HardDriver videoCard)
+        public PersonalComputer(Cpu cpu, Ram ram, IEnumerable<VideoCard> hardDrives, VideoCard videoCard)
             : base(cpu, ram, hardDrives, videoCard)
         {
         }

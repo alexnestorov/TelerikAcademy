@@ -5,6 +5,8 @@ using ComputersExam.Abstracts;
 using ComputersExam.Common;
 using ComputersExam.Exceptions;
 using ComputersExam.Models;
+using ComputersExam.Manufacturer;
+using ComputersExam.Enums;
 
 namespace ComputersExam
 {
@@ -17,18 +19,36 @@ namespace ComputersExam
         public static void Main()
         {
             var manufacturer = Console.ReadLine();
+            IComputerFactory computerFactory;
             if (manufacturer == "HP")
             {
-                InitializeHp();
+                computerFactory = new HpComputerFactory();
             }
             else if (manufacturer == "Dell")
             {
-                InitializeDell();
+                computerFactory = new DellComputerFactory();
             }
             else
             {
                 throw new InvalidArgumentException("Invalid manufacturer!");
             }
+
+            pc = computerFactory.CreatePC(2, ProcessorType.High, new Ram(4), new VideoCard());
+
+            server = computerFactory.CreateServer(
+                new Cpu(4, ProcessorType.High, new Ram(8), new VideoCard()),
+                new Ram(16),
+                new List<VideoCard>() { new VideoCard()},
+                new VideoCard()
+                );
+
+            laptop = computerFactory.CreateLaptop(
+                new Cpu(2, ProcessorType.High, new Ram(4), new VideoCard()),
+                new Ram(4),
+                new List<VideoCard>() { new VideoCard() },
+                new VideoCard(),
+                new LaptopBattery()
+                );
 
             while (true)
             {
@@ -71,66 +91,6 @@ namespace ComputersExam
                     Console.WriteLine("Invalid command!");
                 }
             }
-        }
-
-        private static void InitializeHp()
-        {
-            var ram = new Rammstein(8 / 4);
-            var videoCard = new HardDriver() { IsMonochrome = false };
-            var pc = new PersonalComputer(
-                new Cpu(8 / 4, 32, ram, videoCard),
-                ram,
-                new[] { new HardDriver(500, false, 0) },
-                videoCard);
-
-            var serverRam = new Rammstein(8 * 4);
-            var serverVideo = new HardDriver();
-            var server = new Server(
-                new Cpu(8 / 2, 32, serverRam, serverVideo),
-                serverRam,
-                new List<HardDriver> { new HardDriver(0, true, 2, new List<HardDriver> { new HardDriver(1000, false, 0), new HardDriver(1000, false, 0) }) },
-                serverVideo);
-            {
-                var card = new HardDriver()
-                {
-                    IsMonochrome = false
-                };
-                var ram1 = new Rammstein(8 / 2);
-                var laptop = new Laptop(
-                    new Cpu(8 / 4, 64, ram1, card),
-                    ram1,
-                    new[] { new HardDriver(500, false, 0) },
-                    card,
-                    new LaptopBattery());
-            }
-        }
-
-        private static void InitializeDell()
-        {
-            var ram = new Rammstein(8);
-            var videoCard = new HardDriver() { IsMonochrome = false };
-            var pc = new PersonalComputer(
-                new Cpu(8 / 2, 64, ram, videoCard),
-                ram,
-                new[] { new HardDriver(1000, false, 0) },
-                videoCard);
-
-            var ram1 = new Rammstein(8 * 8);
-            var card = new HardDriver();
-            var server = new Server(
-                new Cpu(8, 64, ram1, card),
-                ram1,
-                new List<HardDriver> { new HardDriver(0, true, 2, new List<HardDriver> { new HardDriver(2000, false, 0), new HardDriver(2000, false, 0) }) },
-                card);
-
-            var ram2 = new Rammstein(8);
-            var videoCard1 = new HardDriver() { IsMonochrome = false };
-            var laptop = new Laptop(
-                new Cpu(8 / 2, 32, ram2, videoCard1),
-                ram2,
-                new[] { new HardDriver(1000, false, 0) },
-                videoCard1,
-                new LaptopBattery());
         }
     }
 }

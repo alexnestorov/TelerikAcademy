@@ -5,7 +5,7 @@ namespace ComputersExam.Abstracts
 {
     public abstract class Computer
     {
-        public Computer(Cpu cpu, Rammstein ram, IEnumerable<HardDriver> hardDrives, HardDriver videoCard)
+        public Computer(Cpu cpu, Ram ram, IEnumerable<VideoCard> hardDrives, VideoCard videoCard)
         {
             this.Cpu = cpu;
             this.Ram = ram;
@@ -13,12 +13,12 @@ namespace ComputersExam.Abstracts
             this.VideoCard = videoCard;
         }
 
-        protected IEnumerable<HardDriver> HardDrives { get; set; }
+        protected IEnumerable<VideoCard> HardDrives { get; set; }
 
-        protected HardDriver VideoCard { get; set; }
+        protected VideoCard VideoCard { get; set; }
 
         protected Cpu Cpu { get; set; }
 
-        protected Rammstein Ram { get; set; }
+        protected Ram Ram { get; set; }
     }
 }
