@@ -2,9 +2,8 @@
 
 using ComputersExam.Abstracts;
 using ComputersExam.Common;
-using ComputersExam.Enums;
 
-namespace ComputersExam.Models
+namespace ComputersExam.Models.ComputerModels
 {
     public class Server : Computer
     {

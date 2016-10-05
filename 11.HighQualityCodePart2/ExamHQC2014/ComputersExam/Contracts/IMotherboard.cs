@@ -1,11 +1,7 @@
 ﻿namespace ComputersExam.Contracts
 {
-    public interface IMotherboard
+    public interface IMotherboardPart
     {
-        int LoadRamValue();
-
-        void SaveRamValue(int value);
-
-        void DrawOnVideoCard(string data);
+        IMotherboard Motherboard { get; set; }
     }
 }

@@ -3,7 +3,7 @@
 using ComputersExam.Abstracts;
 using ComputersExam.Common;
 
-namespace ComputersExam.Models
+namespace ComputersExam.Models.ComputerModels
 {
     public class Laptop : Computer
     {

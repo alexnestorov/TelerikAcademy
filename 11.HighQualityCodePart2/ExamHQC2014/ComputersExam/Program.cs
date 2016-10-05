@@ -38,7 +38,7 @@ namespace ComputersExam
             server = computerFactory.CreateServer(
                 new Cpu(4, ProcessorType.High, new Ram(8), new VideoCard()),
                 new Ram(16),
-                new List<VideoCard>() { new VideoCard()},
+                new List<VideoCard>() { new VideoCard() },
                 new VideoCard()
                 );
 

@@ -1,8 +1,9 @@
-﻿using ComputersExam.Abstracts;
-using ComputersExam.Common;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace ComputersExam.Models
+using ComputersExam.Abstracts;
+using ComputersExam.Common;
+
+namespace ComputersExam.Models.ComputerModels
 {
     public class PersonalComputer : Computer
     {
