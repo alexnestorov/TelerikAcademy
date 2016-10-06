@@ -1,6 +1,4 @@
-﻿using System;
-
-using ComputersExam.Abstracts;
+﻿using ComputersExam.Abstracts;
 
 namespace ComputersExam.Models.CpuModels
 {

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Abstracts\Computer.cs" />
     <Compile Include="Abstracts\Cpu.cs" />
+    <Compile Include="Common\HardDrive.cs" />
     <Compile Include="Contracts\IBattery.cs" />
     <Compile Include="Models\CpuModels\Cpu128.cs" />
     <Compile Include="Models\CpuModels\Cpu32.cs" />

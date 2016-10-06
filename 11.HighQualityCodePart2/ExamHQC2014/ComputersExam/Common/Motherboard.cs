@@ -12,8 +12,13 @@ namespace ComputersExam.Common
 
         public Motherboard(ICpu cpu, IRam ram, IVideoCard videoCard)
         {
+            cpu.Motherboard = this;
             this.Cpu = cpu;
+
+            ram.Motherboard = this;
             this.Ram = ram;
+
+            videoCard.Motherboard = this;
             this.VideoCard = videoCard;
         }
 

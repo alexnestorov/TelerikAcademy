@@ -1,6 +1,6 @@
 ﻿namespace ComputersExam.Contracts
 {
-    public interface ICpu
+    public interface ICpu : IMotherboardPart
     {
         byte CoresNumber { get; }
 
