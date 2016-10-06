@@ -6,9 +6,9 @@ namespace ComputersExam.Common
     {
         private int value;
 
-        public Ram(int a)
+        public Ram(int memory)
         {
-            this.MemoryCapacity = a;
+            this.MemoryCapacity = memory;
         }
 
         public int MemoryCapacity { get; set; }

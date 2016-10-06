@@ -5,7 +5,6 @@ using ComputersExam.Contracts;
 
 namespace ComputersExam.Models.VideoCardModels
 {
-
     public class MonochromeVideoCard : MotherboardPart, IVideoCard
     {
         public void Draw(string data)

@@ -9,7 +9,7 @@ using ComputersExam.Models.ComputerModels;
 using Computers.Common.Components;
 using ComputersExam.Models.VideoCardModels;
 
-namespace ComputersExam
+namespace ComputersExam.Execution
 {
     public class Program
     {

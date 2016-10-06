@@ -8,7 +8,7 @@ namespace ComputersExam.Common
         public const int MaximalBatteryPercentage = 100;
         public const int MinimalBatteryPercentage = 0;
 
-        internal LaptopBattery()
+        public LaptopBattery()
         {
             this.Percentage = InitialBatteryPercentage;
         }

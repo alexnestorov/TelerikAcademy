@@ -11,7 +11,7 @@ namespace ComputersExam.Models.ComputerModels
         private readonly IBattery battery;
 
         public Laptop(ICpu cpu, IRam ram, IEnumerable<IHardDrive> hardDrives, IVideoCard videoCard, IBattery battery)
-            : base(cpu, ram, hardDrives, videoCard )
+            : base(cpu, ram, hardDrives, videoCard)
         {
             this.battery = battery;
         }
