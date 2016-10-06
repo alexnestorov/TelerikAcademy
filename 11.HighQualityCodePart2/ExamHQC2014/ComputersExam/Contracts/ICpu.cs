@@ -4,6 +4,8 @@
     {
         byte CoresNumber { get; }
 
+        void GenerateRandomValue(int min, int max);
+
         void SquareNumber();
     }
 }

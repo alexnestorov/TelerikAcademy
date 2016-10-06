@@ -1,17 +1,18 @@
 ﻿using System.Collections.Generic;
 
 using ComputersExam.Common;
-using ComputersExam.Models;
 using ComputersExam.Enums;
+using ComputersExam.Models.ComputerModels;
+using ComputersExam.Contracts;
 
 namespace ComputersExam.Manufacturer
 {
     public interface IComputerFactory
     {
-        PersonalComputer CreatePC(byte numberOfCores, ProcessorType numberOfBits, Ram ram, VideoCard videoCard);
+        PersonalComputer CreatePC(ICpu cpu, IRam ram, IEnumerable<IHardDrive> hardDrives, IVideoCard videoCard);
 
-        Laptop CreateLaptop(Cpu laptopCpu, Ram laptopRam, IEnumerable<VideoCard> hardDrives, VideoCard laptopVideoCard, LaptopBattery battery);
+        Laptop CreateLaptop(ICpu laptopCpu, IRam laptopRam, IEnumerable<IHardDrive> hardDrives, IVideoCard laptopVideoCard, IBattery battery);
 
-        Server CreateServer(Cpu serverCpu, Ram serverRam, IEnumerable<VideoCard> hardDrives, VideoCard serverVideoCard);
+        Server CreateServer(ICpu serverCpu, IRam serverRam, IEnumerable<IHardDrive> hardDrives, IVideoCard serverVideoCard);
     }
 }

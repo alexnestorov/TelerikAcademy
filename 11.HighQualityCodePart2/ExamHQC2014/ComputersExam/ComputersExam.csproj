@@ -44,22 +44,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstracts\Computer.cs" />
-    <Compile Include="Common\Cpu.cs" />
+    <Compile Include="Abstracts\Cpu.cs" />
+    <Compile Include="Contracts\IBattery.cs" />
+    <Compile Include="Models\CpuModels\Cpu128.cs" />
+    <Compile Include="Models\CpuModels\Cpu32.cs" />
+    <Compile Include="Models\CpuModels\Cpu64.cs" />
+    <Compile Include="Common\Motherboard.cs" />
+    <Compile Include="Common\MotherboardPart.cs" />
     <Compile Include="Common\VideoCard.cs" />
+    <Compile Include="Contracts\ICpu.cs" />
+    <Compile Include="Contracts\IHardDrive.cs" />
+    <Compile Include="Contracts\IMotherboardPart.cs" />
     <Compile Include="Contracts\IMotherboard.cs" />
+    <Compile Include="Contracts\IRam.cs" />
+    <Compile Include="Contracts\IVideoCard.cs" />
     <Compile Include="Enums\ProcessorType.cs" />
     <Compile Include="Exceptions\InvalidArgumentException.cs" />
     <Compile Include="Manufacturer\IComputerFactory.cs" />
     <Compile Include="Manufacturer\DellComputerFactory.cs" />
     <Compile Include="Manufacturer\HpComputerFactory.cs" />
     <Compile Include="Manufacturer\LenovoComputerFactory.cs" />
-    <Compile Include="Models\Laptop.cs" />
+    <Compile Include="Models\ComputerModels\Laptop.cs" />
     <Compile Include="Common\LaptopBattery.cs" />
-    <Compile Include="Models\PersonalComputer.cs" />
+    <Compile Include="Models\ComputerModels\PersonalComputer.cs" />
+    <Compile Include="Models\VideoCardModels\MonochromeVideoCard.cs" />
+    <Compile Include="Models\VideoCardModels\RGBVideoCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\Ram.cs" />
-    <Compile Include="Models\Server.cs" />
+    <Compile Include="Models\ComputerModels\Server.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

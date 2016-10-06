@@ -1,6 +1,6 @@
 ﻿namespace ComputersExam.Contracts
 {
-    public interface IHardDrive : IMotherboardPart
+    public interface IHardDrive
     {
         int Capacity { get; }
 

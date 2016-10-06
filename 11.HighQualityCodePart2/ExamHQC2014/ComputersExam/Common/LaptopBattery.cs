@@ -1,25 +1,31 @@
-﻿namespace ComputersExam.Common
+﻿using ComputersExam.Contracts;
+
+namespace ComputersExam.Common
 {
-    public class LaptopBattery
+    public class LaptopBattery : IBattery
     {
+        public const int InitialBatteryPercentage = 100 / 2;
+        public const int MaximalBatteryPercentage = 100;
+        public const int MinimalBatteryPercentage = 0;
+
         internal LaptopBattery()
         {
-            this.Percentage = 100 / 2;
+            this.Percentage = InitialBatteryPercentage;
         }
 
-        internal int Percentage { get; set; }
+        public int Percentage { get; set; }
 
-        internal void Charge(int p)
+        public void Charge(int percentage)
         {
-            this.Percentage += p;
-            if (this.Percentage > 100)
+            this.Percentage += percentage;
+            if (this.Percentage > MaximalBatteryPercentage)
             {
-                this.Percentage = 100;
+                this.Percentage = MaximalBatteryPercentage;
             }
 
-            if (this.Percentage < 0)
+            if (this.Percentage < MinimalBatteryPercentage)
             {
-                this.Percentage = 0;
+                this.Percentage = MinimalBatteryPercentage;
             }
         }
     }

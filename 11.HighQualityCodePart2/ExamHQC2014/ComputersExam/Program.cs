@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using ComputersExam.Abstracts;
 using ComputersExam.Common;
 using ComputersExam.Exceptions;
-using ComputersExam.Models;
 using ComputersExam.Manufacturer;
-using ComputersExam.Enums;
+using ComputersExam.Models.CpuModels;
+using ComputersExam.Models.ComputerModels;
+using Computers.Common.Components;
+using ComputersExam.Models.VideoCardModels;
 
 namespace ComputersExam
 {
@@ -33,20 +34,20 @@ namespace ComputersExam
                 throw new InvalidArgumentException("Invalid manufacturer!");
             }
 
-            pc = computerFactory.CreatePC(2, ProcessorType.High, new Ram(4), new VideoCard());
+            pc = computerFactory.CreatePC(new Cpu32(2), new Ram(4), new List<HardDrive>() { new HardDrive(500) }, new RGBVideoCard());
 
             server = computerFactory.CreateServer(
-                new Cpu(4, ProcessorType.High, new Ram(8), new VideoCard()),
-                new Ram(16),
-                new List<VideoCard>() { new VideoCard() },
-                new VideoCard()
+                new Cpu64(4),
+                new Ram(8),
+                new List<HardDrive>() { new HardDrive(500) },
+                new MonochromeVideoCard()
                 );
 
             laptop = computerFactory.CreateLaptop(
-                new Cpu(2, ProcessorType.High, new Ram(4), new VideoCard()),
+                new Cpu32(2),
                 new Ram(4),
-                new List<VideoCard>() { new VideoCard() },
-                new VideoCard(),
+                new List<HardDrive>() { new HardDrive(1000) },
+                new RGBVideoCard(),
                 new LaptopBattery()
                 );
 

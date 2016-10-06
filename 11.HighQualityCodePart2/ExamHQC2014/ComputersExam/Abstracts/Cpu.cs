@@ -40,7 +40,7 @@ namespace ComputersExam.Abstracts
             }
         }
 
-        internal void GenerateRandomValue(int minimumRandomValue, int maximumRandomValue)
+        public void GenerateRandomValue(int minimumRandomValue, int maximumRandomValue)
         {
             int randomNumber = Random.Next(minimumRandomValue, maximumRandomValue);
 

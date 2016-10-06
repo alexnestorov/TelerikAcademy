@@ -2,23 +2,23 @@
 
 using ComputersExam.Abstracts;
 using ComputersExam.Common;
+using ComputersExam.Contracts;
+using ComputersExam.Models.VideoCardModels;
 
 namespace ComputersExam.Models.ComputerModels
 {
     public class Server : Computer
     {
-        public Server(Cpu cpu, Ram ram, IEnumerable<VideoCard> hardDrives, VideoCard videoCard)
+        public Server(ICpu cpu, IRam ram, IEnumerable<IHardDrive> hardDrives, IVideoCard videoCard)
             : base(cpu, ram, hardDrives, videoCard)
         {
-            this.VideoCard.IsMonochrome = true;
+            this.VideoCard = new MonochromeVideoCard();
         }
 
         public void Process(int data)
         {
             this.Ram.SaveValue(data);
-
-            // TODO: Fix it
-            this.Cpu.SquareNumber(data);
+            this.Cpu.SquareNumber();
         }
     }
 }

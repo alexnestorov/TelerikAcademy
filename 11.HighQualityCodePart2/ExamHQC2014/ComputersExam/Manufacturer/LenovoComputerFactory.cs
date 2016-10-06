@@ -3,12 +3,15 @@
 using ComputersExam.Models;
 using ComputersExam.Common;
 using ComputersExam.Enums;
+using ComputersExam.Contracts;
+using ComputersExam.Models.ComputerModels;
+using ComputersExam.Models.CpuModels;
 
 namespace ComputersExam.Manufacturer
 {
     public class LenovoComputerFactory : IComputerFactory
     {
-        public Laptop CreateLaptop(Cpu laptopCpu, Ram laptopRam, IEnumerable<VideoCard> hardDrives, VideoCard laptopVideoCard, LaptopBattery battery)
+        public Laptop CreateLaptop(ICpu laptopCpu, IRam laptopRam, IEnumerable<IHardDrive> hardDrives, IVideoCard laptopVideoCard, IBattery battery)
         {
             var laptop = new Laptop(
                 laptopCpu,
@@ -20,18 +23,18 @@ namespace ComputersExam.Manufacturer
             return laptop;
         }
 
-        public PersonalComputer CreatePC(byte numberOfCores, ProcessorType numberOfBits, Ram ram, VideoCard videoCard)
+        public PersonalComputer CreatePC(ICpu cpu, IRam ram, IEnumerable<IHardDrive> hardDrives, IVideoCard videoCard)
         {
             var pc = new PersonalComputer(
-                new Cpu(numberOfCores, numberOfBits, ram, videoCard),
+                cpu,
                 ram,
-                new[] { new VideoCard(500, false, 0) },
+                hardDrives,
                 videoCard);
 
             return pc;
         }
 
-        public Server CreateServer(Cpu serverCpu, Ram serverRam, IEnumerable<VideoCard> hardDrives, VideoCard serverVideoCard)
+        public Server CreateServer(ICpu serverCpu, IRam serverRam, IEnumerable<IHardDrive> hardDrives, IVideoCard serverVideoCard)
         {
             var server = new Server(
                 serverCpu,

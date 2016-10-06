@@ -2,20 +2,21 @@
 
 using ComputersExam.Abstracts;
 using ComputersExam.Common;
+using ComputersExam.Contracts;
 
 namespace ComputersExam.Models.ComputerModels
 {
     public class Laptop : Computer
     {
-        private readonly LaptopBattery battery;
+        private readonly IBattery battery;
 
-        internal Laptop(Cpu cpu, Ram ram, IEnumerable<VideoCard> hardDrives, VideoCard videoCard, LaptopBattery battery)
+        public Laptop(ICpu cpu, IRam ram, IEnumerable<IHardDrive> hardDrives, IVideoCard videoCard, IBattery battery)
             : base(cpu, ram, hardDrives, videoCard )
         {
             this.battery = battery;
         }
 
-        internal void ChargeBattery(int percentage)
+        public void ChargeBattery(int percentage)
         {
             this.battery.Charge(percentage);
 

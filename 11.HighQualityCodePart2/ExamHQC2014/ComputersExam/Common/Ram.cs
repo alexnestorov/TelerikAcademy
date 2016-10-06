@@ -1,15 +1,17 @@
-﻿namespace ComputersExam.Common
+﻿using ComputersExam.Contracts;
+
+namespace ComputersExam.Common
 {
-    public class Ram
+    public class Ram : MotherboardPart, IRam
     {
         private int value;
 
-        internal Ram(int a)
+        public Ram(int a)
         {
-            this.Amount = a;
+            this.MemoryCapacity = a;
         }
 
-        public int Amount { get; set; }
+        public int MemoryCapacity { get; set; }
 
         public void SaveValue(int newValue)
         {

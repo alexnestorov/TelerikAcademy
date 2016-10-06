@@ -1,22 +1,22 @@
 ﻿using System.Collections.Generic;
 
 using ComputersExam.Abstracts;
-using ComputersExam.Common;
+using ComputersExam.Contracts;
 
 namespace ComputersExam.Models.ComputerModels
 {
     public class PersonalComputer : Computer
     {
-        public PersonalComputer(Cpu cpu, Ram ram, IEnumerable<VideoCard> hardDrives, VideoCard videoCard)
+        public PersonalComputer(ICpu cpu, IRam ram, IEnumerable<IHardDrive> hardDrives, IVideoCard videoCard)
             : base(cpu, ram, hardDrives, videoCard)
         {
         }
 
         public void Play(int guessNumber)
         {
-            this.Cpu.Rand(1, 10);
+            this.Cpu.GenerateRandomValue(1, 10);
             var number = this.Ram.LoadValue();
-            if (number + 1 != guessNumber + 1)
+            if (number != guessNumber)
             {
                 this.VideoCard.Draw(string.Format("You didn't guess the number {0}.", number));
             }
