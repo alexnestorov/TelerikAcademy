@@ -1,0 +1,16 @@
+﻿Bottleneck description: --------------------
+#1:Removed Thread.Sleep(350) from class Engine to add better performance of the execution.
+
+
+Bug reports: --------------------
+Format: #Bug number - Class name - Bug description
+Example: #1 - PartnerBankingService - The variable "money" at line 36 overflows when you try to add more than 2.1 billion dollars.
+--------
+#1 - Add missing } in class Engine line 78. Note that Engine class is rename to SchoolSystemEngine for better naming of the engine - Remove Thread.Sleep(350);
+#2 - Student PrintStudentMarks() - doesn't return message when there are no marks for current student. Method is renamed from the original task.
+#3 - TeacherAddMarkCommand - replaced id's from Teacher and Student.
+#4 -
+
+Note: ConsoleApplication3 is not renamed because not crash the application. I know it should be renamed properly.
+Documentation - All documented interfaces are in namespace ConsoleApplication3.Contracts 
+
