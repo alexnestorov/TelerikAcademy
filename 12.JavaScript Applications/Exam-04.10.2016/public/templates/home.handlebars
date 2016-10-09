@@ -1,0 +1,16 @@
+<table class="table-striped">
+  <tr class="container">
+    <th>Title</th>
+    <th>Description</th>
+    <th>Created on</th>
+    <th>Image</th>
+  </tr>
+  {{#each this}}
+  <tr class="container">
+    <td>{{this.title}}</td>
+    <td>{{this.description}}</td>
+    <td>{{this.createdOn}}</td>
+    <td><img src="{{this.img}}"></td>
+  </div>
+  {{/each}}
+</table>

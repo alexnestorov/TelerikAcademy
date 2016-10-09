@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GoodMats</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  </head>
+  <body>
+    <header class="nav navbar">
+        <nav class="navbar navbar-default">
+            <ul id="loginNav" class="nav navbar-nav">
+                <li><a href="#/home" id="link-home">Home</a></li>
+                <li><a href="#/login" id="link-login">Login</a></li>
+                <li><a href="#/register" id="link-register">Register</a></li>
+                <li><a href="#/add-material" id="link-register">Add new material</a></li>
+            </ul>
+            <div id="logout" class="form-group">
+                Hello, <a href="#/user-info"><strong id="span-username"></strong></a>
+                <button id="btn-logout" type="submit" class="btn btn-default">Logout</button>
+            </div>
+        </nav>
+    </header>
+    <section id="loadingBox" class="navbar-default">Loading...</section>
+    <section id="infoBox" class="navbar-default" onclick="$(this).hide()">Info</section>
+    <section id="errorBox" class="navbar-default" onclick="$(this).hide()">Error</section>
+  <div id="content">
+
+  </div>
+
+
+  <footer class="footer navbar-default navbar-fixed-bottom">
+    <div class="navbar-form"><h5>TELERIK ACADEMY 2016 JavaScript Applications EXAM 04.10.2016</h5></div>
+  </footer>
+    <!-- Libraries -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/sammy/lib/sammy.js"></script>
+  <script src="bower_components/handlebars/handlebars.js"></script>
+
+  <!-- Application Controllers -->
+  <script src="scripts/controllers/home-controller.js"></script>
+  <script src="scripts/controllers/users-controller.js"></script>
+  <script src="scripts/controllers/materials-controller.js"></script>
+
+  <!-- Application SetUp -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/validators/validator.js"></script>
+  <script src="scripts/templates.js"></script>
+  <script src="scripts/json-requester.js"></script>
+  <script src="scripts/data.js"></script>
+
+  </body>
+</html>
