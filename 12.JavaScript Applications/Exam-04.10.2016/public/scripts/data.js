@@ -57,7 +57,7 @@ function login(user) {
   }
     var reqUser = {
       username: user.username,
-      passHash: user.password
+      password: user.password
     };
 
 
