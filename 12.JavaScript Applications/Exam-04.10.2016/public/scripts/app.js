@@ -4,7 +4,7 @@ var sammyApp = Sammy('#content', function() {
   this.get('#/', function(){
     this.redirect('#/home', homeController.all);
   })
-  this.get('#/home', homeController.all);
+  this.get('#/home', materialsController.all);
   this.get('#materials/:id', materialsController.getById);
   this.get('#/login', usersController.login);
   this.get('#profiles/:username', function(context){
