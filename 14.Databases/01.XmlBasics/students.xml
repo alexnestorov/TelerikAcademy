@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='students.xslt'?>
+<students xmlns:student="urn:students">
+  <student faculty-number="23154">
+    <name>Ivan Ivanoff</name>
+    <gender>Male</gender>
+    <birthday>05.05.1990 г.</birthday>
+    <phone>0888888888</phone>
+    <email>ivan@abv.bg</email>
+    <course>Second</course>
+    <specialty>Economics</specialty>
+    <taken-exams>
+      <exam>
+        <name>JS Exam</name>
+        <tutor>Doncho Minkov</tutor>
+        <grade>6</grade>
+      </exam>
+    </taken-exams>
+  </student>
+  <student faculty-number="12345">
+    <name>Petar Petrov</name>
+    <gender>Male</gender>
+    <birthday>13.02.1982 г.</birthday>
+    <phone>0777777111</phone>
+    <email>pesho@yahoo.com</email>
+    <course>Fifth</course>
+    <specialty>Math</specialty>
+    <taken-exams>
+      <exam>
+        <name>Mathematics</name>
+        <tutor>Alexander Alexandrov</tutor>
+        <grade>6</grade>
+      </exam>
+      <exam>
+        <name>Algebra</name>
+        <tutor>Vasil Vasilev</tutor>
+        <grade>5</grade>
+      </exam>
+    </taken-exams>
+  </student>
+  <student faculty-number="12555">
+    <name>Gergana Ivanova</name>
+    <gender>Female</gender>
+    <birthday>18.10.1991 г.</birthday>
+    <phone>0666666666</phone>
+    <email>minka@gmail.com</email>
+    <course>Fourth</course>
+    <specialty>Physics</specialty>
+    <taken-exams>
+      <exam>
+        <name>Physics Basics</name>
+        <tutor>DONT KNOW</tutor>
+        <grade>6</grade>
+      </exam>
+      <exam>
+        <name>Physics Advanced</name>
+        <tutor>One-one</tutor>
+        <grade>6</grade>
+      </exam>
+    </taken-exams>
+  </student>
+</students>
