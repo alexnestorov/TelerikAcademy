@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='Style/catalogue-style.xslt'?>
+<catalogue>
+  <album>
+    <name>Sensation 2000</name>
+    <artist>DJ Tiesto</artist>
+    <year>2011</year>
+    <producer>Black Hole Recordings</producer>
+    <price>66.99</price>
+    <songs>
+      <song title="Ayla" length="6:15"/>
+      <song title="Traffic" length="2:57"/>
+      <song title="Adagio for strings" length="4:50"/>
+      <song title="Elements of life" length="8:25"/>
+    </songs>
+  </album>
+  <album>
+    <name>For an angel</name>
+    <artist>Paul van Dyke</artist>
+    <year>1994</year>
+    <producer>Paul van Dyke</producer>
+    <price>49.99</price>
+    <songs>
+      <song title="For an angel"  length="4:44"/>
+      <song title="Seven ways"  length="6:23"/>
+      <song title="45 RPM"  length="4:27"/>
+    </songs>
+  </album>
+  <album>
+    <name>Serenity</name>
+    <artist>Armin van Buuren</artist>
+    <year>2001</year>
+    <producer>Armada music</producer>
+    <price>49.99</price>
+    <songs>
+      <song title="Serenity"  length="3:33"/>
+      <song title="In and out of love"  length="6:15"/>
+      <song title="Rising star"  length="4:27"/>
+    </songs>
+  </album>
+</catalogue>

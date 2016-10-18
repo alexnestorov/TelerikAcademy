@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonParsingVideos", "JsonParsingVideos\JsonParsingVideos.csproj", "{7FD5A7A0-C772-4DBA-A4A8-088C43D4D91B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FD5A7A0-C772-4DBA-A4A8-088C43D4D91B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD5A7A0-C772-4DBA-A4A8-088C43D4D91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FD5A7A0-C772-4DBA-A4A8-088C43D4D91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD5A7A0-C772-4DBA-A4A8-088C43D4D91B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
