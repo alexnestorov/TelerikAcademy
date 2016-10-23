@@ -9,11 +9,11 @@ namespace FacadePattern.Models
     /// </summary>
     public class Mortgage
     {
-        private Bank bank;
-        private Loan loan;
-        private Credit credit;
+        private IBank bank;
+        private ILoan loan;
+        private ICredit credit;
 
-        public Mortgage(Bank bank, Loan loan, Credit credit)
+        public Mortgage(IBank bank, ILoan loan, ICredit credit)
         {
             if (bank == null)
             {
