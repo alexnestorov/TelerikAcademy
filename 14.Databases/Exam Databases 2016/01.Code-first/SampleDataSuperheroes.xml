@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Superheroes>
+  <Superhero name="Batman" secretIdentity="Bruce Wayne" alignment="evil" city="Gotham City" />
+  <Superhero name="Ironman" secretIdentity="Tonny Stark" alignment="evil" city="NewYork">
+    <Power power="Magic" />
+    <Power power="Martial Arts" />
+    <Power power="Multiverse Travel" />
+  </Superhero>
+</Superheroes>
