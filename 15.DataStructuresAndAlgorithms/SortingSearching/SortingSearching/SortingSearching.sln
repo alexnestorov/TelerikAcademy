@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingAndSearchingApp", "SortingAndSearchingApp\SortingAndSearchingApp.csproj", "{A896DC0D-D28F-4DF6-8172-9FE18DC45571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searching.Tests", "Searching.Tests\Searching.Tests.csproj", "{873C5DEC-81AA-4621-90F8-38A59FFBCB41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A896DC0D-D28F-4DF6-8172-9FE18DC45571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A896DC0D-D28F-4DF6-8172-9FE18DC45571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A896DC0D-D28F-4DF6-8172-9FE18DC45571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A896DC0D-D28F-4DF6-8172-9FE18DC45571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{873C5DEC-81AA-4621-90F8-38A59FFBCB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{873C5DEC-81AA-4621-90F8-38A59FFBCB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{873C5DEC-81AA-4621-90F8-38A59FFBCB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{873C5DEC-81AA-4621-90F8-38A59FFBCB41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
