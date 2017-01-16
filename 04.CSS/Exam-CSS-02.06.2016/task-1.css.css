@@ -1,0 +1,76 @@
+body, div, h1, h2, p, img, ul, li {
+    margin: 0;
+    padding: 0;
+}
+#root {
+    width: 720px;
+    margin-left: 6px;
+    margin-top: 6px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    background-color: #777777;
+}
+.header, h2 {
+    color: #ccc;
+    text-shadow: 3px 3px #131313;
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    padding-top: 40px;
+}
+h2 {
+    display: block;
+    float: right;
+    text-decoration: underline;
+    font-size: 20px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+strong {
+  display: inline;
+  height: 0;
+    color: #ccc;
+    text-shadow: 3px 3px #131313;
+}
+.remark {
+    display: none;
+}
+.header {
+    text-align: center;
+}
+div#root > p.description {
+    padding-left: 35px;
+    text-align: left;
+}
+img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid white;
+    display: block;
+    margin-right: 10px;
+    margin-top: 10px;
+    float: right;
+}
+ul.heroes-list {
+    padding-left: 20px;
+}
+div.container > ul > li {
+    list-style-type: none;
+    width: 330px;
+    height: 200px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #000;
+    display: inline-block;
+    margin: 5px;
+}
+div.container > ul > li > p.description {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 20px;
+    display: block;
+    text-align: justify;
+}

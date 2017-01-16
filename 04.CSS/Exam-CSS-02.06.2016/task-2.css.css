@@ -1,0 +1,77 @@
+body, div, h1, ul, li, img, strong, a{
+  padding: 0;
+  margin: 0;
+}
+#root {
+  width: 1024px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+margin-left: 28px;
+margin-top: 35px;
+background: url(../imgs/logo.png);
+background-size: 60px 20px;
+background-repeat: no-repeat;
+}
+h1{
+padding-left: 60px;
+display: inline-block;
+}
+img{
+  display: none;
+}
+ul{
+  list-style-type: none;
+}
+li:first-of-type{
+  margin-top: 20px;
+}
+li{
+  display: block;
+  width: 120px;
+  padding: 10px;
+  margin-left: 20px;
+  border-bottom: 1px solid black;
+}
+li > a{
+  display: none;
+}
+strong{
+  padding-left: 20px;
+}
+li:hover img{
+  margin-left: 120px;
+  display: block;
+float: left;
+  width: 162px;
+  height: 142px;
+  border: 3px solid #973A3A;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+li:hover {
+  background: url(../imgs/logo.png);
+  background-size: 30px 10px;
+  background-repeat: no-repeat;
+  text-shadow: 2px 2px #973A3A;
+}
+li:hover a{
+  float: left;
+  display: block;
+}
+li:hover a:first-of-type{
+  margin-left: 120px;
+  display: block;
+  width: 162px;
+  color: #fff;
+  border: 3px solid #555;
+  background: url(../imgs/superhero-1.jpg);
+  text-align: center;
+}
+li:hover a:nth-of-type(2){
+  margin-left: 120px;
+  display: block;
+  width: 162px;
+  color: white;
+  border: 3px solid #555;
+  background: url(../imgs/superhero-2.jpg);
+  text-align: center;
+}
